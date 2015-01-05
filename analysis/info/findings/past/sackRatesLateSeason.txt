@@ -1,0 +1,187 @@
+
+~~~~~~~~~~~~    Sack Rates Late in the Season (expressed as the number of passes attempted on the defense over the number of sacks)    ~~~~~~~~~~~~~
+
+======================
+2009
+======================
+
+Browns  -------->   4.063
+49ers  -------->   9.357
+Ravens  -------->   10.0
+Cowboys  -------->   10.462
+Patriots  -------->   10.818
+Jets  -------->   11.375
+Packers  -------->   11.818
+Redskins  -------->   11.833
+Raiders  -------->   12.25
+Eagles  -------->   12.273
+Panthers  -------->   13.25
+Texans  -------->   13.545
+Bills  -------->   14.429
+Bears  -------->   15.444
+Steelers  -------->   15.444
+Vikings  -------->   16.75
+Cardinals  -------->   16.75
+Saints  -------->   16.889
+Titans  -------->   17.167
+Dolphins  -------->   17.778
+Giants  -------->   19.857
+Colts  -------->   19.857
+Bengals  -------->   22.4
+Rams  -------->   26.2
+Lions  -------->   26.4
+Falcons  -------->   27.6
+Chargers  -------->   28.6
+Chiefs  -------->   29.0
+Buccaneers  -------->   30.25
+Broncos  -------->   34.4
+Jaguars  -------->   65.0
+Seahawks  -------->   150.0
+
+======================
+2010
+======================
+
+Patriots  -------->   8.0
+Bengals  -------->   9.308
+Chargers  -------->   9.692
+Jets  -------->   9.692
+Chiefs  -------->   10.083
+Panthers  -------->   10.1
+Lions  -------->   10.417
+Cowboys  -------->   10.462
+Raiders  -------->   11.545
+Steelers  -------->   11.583
+Packers  -------->   11.583
+Falcons  -------->   12.364
+Bears  -------->   12.667
+49ers  -------->   13.222
+Giants  -------->   13.8
+Vikings  -------->   14.0
+Buccaneers  -------->   14.125
+Cardinals  -------->   14.9
+Texans  -------->   15.545
+Dolphins  -------->   16.111
+Seahawks  -------->   16.625
+Saints  -------->   17.6
+Ravens  -------->   18.2
+Rams  -------->   18.5
+Bills  -------->   18.667
+Titans  -------->   19.857
+Eagles  -------->   20.0
+Redskins  -------->   23.0
+Browns  -------->   23.6
+Broncos  -------->   24.4
+Jaguars  -------->   24.6
+Colts  -------->   29.0
+
+======================
+2011
+======================
+
+Eagles  -------->   7.235
+Dolphins  -------->   8.692
+Vikings  -------->   9.067
+Bengals  -------->   9.214
+Giants  -------->   9.8 <-------- UNDERWEIGHTED (Osi Umenyiora only came around to full health for the final game of the season)
+49ers  -------->   10.417
+Bears  -------->   10.778
+Seahawks  -------->   11.636
+Patriots  -------->   11.769
+Cardinals  -------->   12.231
+Chargers  -------->   12.273
+Jets  -------->   12.909
+Panthers  -------->   13.125
+Colts  -------->   13.5
+Texans  -------->   13.556
+Chiefs  -------->   14.222
+Broncos  -------->   14.25
+Bills  -------->   14.273
+Jaguars  -------->   14.5
+Falcons  -------->   15.2
+Ravens  -------->   15.571
+Browns  -------->   15.667
+Steelers  -------->   16.125
+Lions  -------->   17.6
+Redskins  -------->   17.875
+Cowboys  -------->   19.714
+Rams  -------->   20.5
+Saints  -------->   20.625
+Raiders  -------->   25.333
+Titans  -------->   27.833
+Buccaneers  -------->   35.5
+Packers  -------->   46.667
+
+======================
+2012
+======================
+
+Titans  -------->   6.375
+Vikings  -------->   6.6
+Chargers  -------->   6.933
+Rams  -------->   9.588
+Redskins  -------->   9.727
+Jets  -------->   9.818
+Broncos  -------->   10.0
+Bengals  -------->   10.583
+Steelers  -------->   11.083
+Raiders  -------->   11.273
+Packers  -------->   11.667
+Seahawks  -------->   12.286
+Ravens  -------->   13.0
+Panthers  -------->   13.1
+Dolphins  -------->   13.556
+Colts  -------->   13.889
+49ers  -------->   14.125
+Bears  -------->   14.556
+Browns  -------->   14.778
+Chiefs  -------->   15.167
+Patriots  -------->   16.182
+Cowboys  -------->   16.5
+Eagles  -------->   16.9
+Texans  -------->   17.0
+Buccaneers  -------->   19.667
+Bills  -------->   22.833
+Jaguars  -------->   24.143
+Cardinals  -------->   28.6
+Lions  -------->   32.167
+Saints  -------->   35.6
+Giants  -------->   36.667
+Falcons  -------->   76.5
+
+======================
+2013
+======================
+
+Panthers  -------->   5.095
+Bills  -------->   7.929
+Rams  -------->   8.083
+Vikings  -------->   10.231
+Seahawks  -------->   10.4
+Cardinals  -------->   10.462
+Chiefs  -------->   10.6
+Buccaneers  -------->   11.545
+Saints  -------->   11.6
+Patriots  -------->   12.077
+Colts  -------->   13.0
+Jaguars  -------->   13.545
+Steelers  -------->   13.778
+Giants  -------->   14.1
+49ers  -------->   14.125
+Eagles  -------->   15.25
+Falcons  -------->   16.1
+Jets  -------->   16.857
+Cowboys  -------->   18.25
+Chargers  -------->   18.333
+Bears  -------->   18.571
+Broncos  -------->   21.333
+Raiders  -------->   21.571
+Bengals  -------->   21.857
+Lions  -------->   22.333
+Browns  -------->   23.429
+Packers  -------->   24.833
+Titans  -------->   26.4
+Dolphins  -------->   28.6
+Redskins  -------->   28.667
+Texans  -------->   40.75
+Ravens  -------->   60.0

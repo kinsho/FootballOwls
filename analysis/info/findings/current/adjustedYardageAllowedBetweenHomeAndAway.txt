@@ -1,0 +1,40 @@
+
+~~~~~~~~~~~~    Difference Between Average Yardage Allowed by Defenses at Home vs Away    ~~~~~~~~~~~~~
+~~~~~~~~~    A negative value indicates that the team gives up much less yardage at home compared to road games  ~~~~~~~~~~~~~~
+
+======================
+2014
+======================
+
+Chargers  -------->   -126.575
+Jets  -------->   -125.325
+Ravens  -------->   -86.175
+49ers  -------->   -82.425
+Falcons  -------->   -80.0
+Lions  -------->   -69.55
+Colts  -------->   -46.3
+Packers  -------->   -36.425
+Buccaneers  -------->   -31.675
+Jaguars  -------->   -29.925
+Dolphins  -------->   -20.975
+Giants  -------->   -18.875
+Bills  -------->   -16.975
+Bears  -------->   -4.925
+Raiders  -------->   -3.75
+Eagles  -------->   1.9
+Panthers  -------->   13.275
+Patriots  -------->   13.7
+Texans  -------->   15.15
+Seahawks  -------->   17.15
+Broncos  -------->   17.975
+Vikings  -------->   22.3
+Cardinals  -------->   24.375
+Saints  -------->   25.55
+Chiefs  -------->   29.375
+Redskins  -------->   36.425
+Browns  -------->   43.3
+Steelers  -------->   50.5
+Cowboys  -------->   54.775
+Rams  -------->   57.275
+Titans  -------->   63.55
+Bengals  -------->   80.85

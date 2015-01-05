@@ -11,13 +11,13 @@ class GameFetcher:
 	# Constants
 	WEEK_URL = 'http://www.pro-football-reference.com/years/$year/week_$week.htm'
 	BOX_SCORE_URL = 'http://www.pro-football-reference.com$box'
-	BOX_SCORES_TEXT_FILE = 'info/boxScores.txt'
+	BOX_SCORES_TEXT_FILE = '../info/boxScores.txt'
 
 	def __init__(self):
 
 		#Attributes/Params
 
-		self.weeks = [14, 15, 16, 17]
+		self.weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 		self.years = [2009, 2010, 2011, 2012, 2013]
 
 	# Function is responsible for fetching the box scores of all relevant games
@@ -45,10 +45,13 @@ class GameFetcher:
 				soup = SiteScraper.cook_soup(url)
 
 				links = soup.find_all('a')
+
+				limit = 0
 				for link in links:
 
-					if len(link.contents) > 0 and 'View full boxscore' in link.contents[0]:
+					if len(link.contents) > 0 and 'View full boxscore' in link.contents[0] and limit < 16:
 
+						limit += 1
 						url = box_score_template.substitute( {'box' : link.attrs['href']} )
 						soup = SiteScraper.scrape_html(url)
 

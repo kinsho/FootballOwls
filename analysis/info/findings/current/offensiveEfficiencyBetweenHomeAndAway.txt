@@ -1,0 +1,41 @@
+
+~~~~~~~~~~~~    Differences in Offensive Yardage between Home and Away     ~~~~~~~~~~~~~
+~~~~~~~~~~~~    Offensive Yardage Expressed as Passing Yards plus Rushing Yards * 2.2 over Runs and Passes Attempted     ~~~~~~~~~~~~~
+~~~~~~~~~~~~    Negative Values Imply Better Offensive Performance on Road  ~~~~~~~~~~~~
+
+======================
+2014
+======================
+
+Texans  -------->   -1.325
+Seahawks  -------->   -1.058
+Browns  -------->   -0.803
+Steelers  -------->   -0.764
+Eagles  -------->   -0.729
+Redskins  -------->   -0.661
+Saints  -------->   -0.605
+Panthers  -------->   -0.395
+Ravens  -------->   -0.376
+Cowboys  -------->   -0.317  <----- POSSIBLY UNDERWEIGHT (Tony Romo did not play one game at home)
+Giants  -------->   -0.255
+Cardinals  -------->   -0.224
+Titans  -------->   -0.067
+Patriots  -------->   -0.058
+Vikings  -------->   -0.02
+Buccaneers  -------->   0.08
+Chargers  -------->   0.187
+Jets  -------->   0.197
+Bills  -------->   0.372
+Lions  -------->   0.376
+Rams  -------->   0.484
+Chiefs  -------->   0.52
+Bears  -------->   0.538
+Falcons  -------->   0.704
+Colts  -------->   0.781
+Jaguars  -------->   0.839
+Bengals  -------->   0.877
+Dolphins  -------->   0.938
+49ers  -------->   1.268
+Packers  -------->   1.494
+Broncos  -------->   1.623
+Raiders  -------->   1.8

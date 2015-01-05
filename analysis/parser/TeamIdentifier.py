@@ -8,7 +8,7 @@ from SiteScraper import *
 class TeamIdentifer:
 
 	# Constants
-	BOX_SCORES_TEXT_FILE = 'info/boxScores.txt'
+	BOX_SCORES_TEXT_FILE = '../info/boxScores.txt'
 
 	def __init__(self):
 

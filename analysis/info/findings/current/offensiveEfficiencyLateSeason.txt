@@ -1,0 +1,39 @@
+
+~~~~~~~~~~~~    Offensive Yardage Efficiency Late in the Season (Expressed as Passing Yards plus Rushing Yards * 2.2 over Runs and Passes Attempted)    ~~~~~~~~~~~~~
+
+======================
+2014
+======================
+
+Colts  -------->   6.38
+Raiders  -------->   6.492
+Bills  -------->   6.72
+Browns  -------->   6.869
+Texans  -------->   6.878
+Bears  -------->   6.95
+Chargers  -------->   7.136
+Patriots  -------->   7.222
+Cardinals  -------->   7.228
+Buccaneers  -------->   7.249
+Titans  -------->   7.319
+Saints  -------->   7.356
+Jaguars  -------->   7.609
+Lions  -------->   7.772
+Ravens  -------->   7.842
+Rams  -------->   7.948
+Giants  -------->   8.055
+Falcons  -------->   8.153
+Eagles  -------->   8.167
+Chiefs  -------->   8.263
+Redskins  -------->   8.354
+Broncos  -------->   8.429
+Steelers  -------->   8.443
+Dolphins  -------->   8.542
+Jets  -------->   8.643
+Vikings  -------->   8.9
+Bengals  -------->   8.939
+Packers  -------->   9.106
+Cowboys  -------->   9.266
+Panthers  -------->   9.454
+Seahawks  -------->   9.98
+49ers  -------->   10.616

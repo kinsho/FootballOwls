@@ -12,15 +12,16 @@ class Sorter:
 
 		pass
 
-	# Function is responsible for sorting data by year
+	# Function is responsible for sorting dictionary data by the numeric keys associated
+	# with the dara
 	#
 	# @param {Dictionary} data - the data to format
 	#
-	# @returns {OrderedDictionary} - a dictionary object where the 'year' keys are ordered appropriately
+	# @returns {OrderedDictionary} - a dictionary object where the values are ordered appropriately by key
 	#
 	# @author kinsho
 	#
 	@staticmethod
-	def sort_by_year(data):
+	def sort_by_index(data):
 
-		return collections.OrderedDict(sorted(data.items(), key=lambda x: x[0]))
+		return collections.OrderedDict(sorted(data.items(), key=lambda x: int(x[0])))

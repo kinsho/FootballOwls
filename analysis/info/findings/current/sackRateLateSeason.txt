@@ -1,0 +1,39 @@
+
+~~~~~~~~~~~~    Sack Rates Late in the Season (expressed as the number of passes attempted on the defense over the number of sacks)    ~~~~~~~~~~~~~
+
+======================
+2014
+======================
+
+Seahawks  -------->   6.941
+Jets  -------->   7.4
+Giants  -------->   7.714
+Ravens  -------->   8.278
+Panthers  -------->   8.571
+Texans  -------->   9.385
+49ers  -------->   10.2
+Chiefs  -------->   10.214
+Rams  -------->   10.833
+Packers  -------->   10.846
+Lions  -------->   10.923
+Steelers  -------->   11.5
+Buccaneers  -------->   11.6
+Patriots  -------->   12.25
+Cowboys  -------->   12.444
+Browns  -------->   13.857
+Bears  -------->   15.2
+Cardinals  -------->   16.111
+Redskins  -------->   16.75
+Titans  -------->   17.0
+Saints  -------->   17.0
+Raiders  -------->   17.111
+Jaguars  -------->   17.375
+Broncos  -------->   17.857
+Eagles  -------->   19.143
+Vikings  -------->   19.833
+Chargers  -------->   20.25
+Falcons  -------->   20.375
+Colts  -------->   23.714
+Bengals  -------->   24.4
+Bills  -------->   26.0
+Dolphins  -------->   27.667
