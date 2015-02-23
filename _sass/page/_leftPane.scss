@@ -1,0 +1,320 @@
+/* ----------------------- IMPORTS ----------------------------- */
+
+@import '../foundation/colors';
+@import '../foundation/animations';
+@import '../foundation/fonts';
+
+/* ----------------------- ANIMATIONS ----------------------------- */
+
+@include keyframes('fadeTagsLabelIn')
+{
+	0%
+	{
+		@include shiftTransition($x: -50%, $y: -60%);
+
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		@include shiftTransition($x: -50%, $y: -50%);
+
+		opacity: 1.0;
+	}
+}
+
+@include keyframes('fadeTagsLabelOut')
+{
+	0%
+	{
+		@include shiftTransition($x: -50%, $y: -50%);
+
+		opacity: 1.0;
+	}
+
+	100%
+	{
+		@include shiftTransition($x: -50%, $y: -60%);
+
+		opacity: 0.0;
+	}
+}
+
+@include keyframes('exitRight')
+{
+	0%
+	{
+		@include shiftTransition($x: 0%, $y: 0%);
+	}
+
+	100%
+	{
+		@include shiftTransition($x: 300%, $y: 0%);
+	}
+}
+
+@include keyframes('exitLeft')
+{
+	0%
+	{
+		@include shiftTransition($x: 0%, $y: 0%);
+	}
+
+	100%
+	{
+		@include shiftTransition($x: -300%, $y: 0%);
+	}
+}
+
+@include keyframes('enterFromLeft')
+{
+	0%
+	{
+		@include shiftTransition($x: -300%, $y: 0%);
+	}
+
+	100%
+	{
+		@include shiftTransition($x: 0%, $y: 0%);
+	}
+}
+
+@include keyframes('enterFromRight')
+{
+	0%
+	{
+		@include shiftTransition($x: 300%, $y: 0%);
+	}
+
+	100%
+	{
+		@include shiftTransition($x: 0%, $y: 0%);
+	}
+}
+
+/* ----------------------- MIX-INS ----------------------------- */
+
+/**
+ * Styling for the navigational icons used to browse through the posts
+ *
+ * @author kinsho
+ *
+ */
+@mixin postNavIcon()
+{
+	@include transitionSettings($property: opacity, $timing: linear, $duration: 0.2s);
+
+	// Attributes that will be applied to the icon
+	font-size: 30px;
+	color: map-get($COLORS, darkBlueTheme);
+
+	cursor: pointer;
+	opacity: 0.8;
+
+	&.disabled
+	{
+		opacity: 0.2;
+		cursor: default;
+	}
+}
+
+/* ----------------------- STYLING ----------------------------- */
+
+#leftPane
+{
+	// Introduce a color gradient to give the site some flair
+	@include setGradient($initialColor: map-get($COLORS, lightBlueTheme), $endColor: map-get($COLORS, lightWhiteTheme));
+
+	// Set some spacing here...
+	padding:
+	{
+		left: 10px;
+	}
+
+	float: left;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden; // Keep this to prevent moving text from being visible from outside the left-pane
+
+	width: 15%;
+	height: 100%;
+}
+
+// ------ Boundary --------
+.divider
+{
+	border:
+	{
+		bottom:
+		{
+			width: 2px;
+			style: solid;
+			color: map-get($COLORS, grayTheme);
+		}
+	}
+
+	margin:
+	{
+		top: 30px;
+		bottom: 30px;
+	}
+}
+
+// ----- Logo --------
+#siteHeader
+{
+	margin:
+	{
+		top: 20px;
+	}
+
+	height: 100px;
+
+	text-align: left;
+	position: relative;
+
+	& > div
+	{
+		@include shiftTransition($x: -50%);
+
+		position: absolute;
+		left: 50%;
+	}
+}
+
+// ----- Posts Catalog --------
+#postsContainer
+{
+	min-height: 350px;
+	z-index: 1;
+
+	&.shiftLeft
+	{
+		@include animationSettings($keyframeSet: exitLeft, $duration: 0.4s, $timing: ease-in);
+	}
+
+	&.shiftRight
+	{
+		@include animationSettings($keyframeSet: exitRight, $duration: 0.4s, $timing: ease-in);
+	}
+
+	&.enterFromLeft
+	{
+		@include animationSettings($keyframeSet: enterFromLeft, $duration: 0.3s, $timing: ease-out);
+	}
+
+	&.enterFromRight
+	{
+		@include animationSettings($keyframeSet: enterFromRight, $duration: 0.3s, $timing: ease-out);
+	}
+}
+
+.postListingDate
+{
+	@extend %smallFont;
+	@extend %italicizedFont;
+
+	margin:
+	{
+		top: 10px;
+	}
+}
+
+.postListingTitle
+{
+	@include transitionSettings($property: opacity, $timing: linear, $duration: 0.1s);
+	@extend %smallBlueFont;
+
+	margin:
+	{
+		bottom: 10px;
+	}
+
+	cursor: pointer;
+
+	max-height: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	&:hover
+	{
+		opacity: 0.55;
+	}
+}
+
+#leftPostIndexNavigator
+{
+	@include postNavIcon();
+
+	margin:
+	{
+		right: 50px;
+	}
+}
+
+#rightPostIndexNavigator
+{
+	@include postNavIcon();
+
+	margin:
+	{
+		left: 50px;
+	}
+}
+
+
+// ----- Tag Cloud --------
+#tagsContainer
+{
+	// Fade the cloud when the cursor hovers over the cloud
+	@include transitionSettings($property: opacity, $timing: linear, $duration: 0.2s);
+
+	opacity: 1.0;
+
+	cursor: pointer;
+
+	&:hover
+	{
+		opacity: 0.15;
+	}
+}
+
+#tagCloud
+{
+	border:
+	{
+		width: 1px;
+		style: solid;
+		radius: 10px;
+	}
+
+	width: 170px;
+	height: 300px;
+}
+
+#tagsLabel
+{
+	@extend %distinctionFont;
+
+	@include animationSettings($keyframeSet: fadeTagsLabelOut, $duration: 0.4s);
+
+	margin:
+	{
+		left: auto;
+		right: auto;
+	}
+
+	width: 80%;
+
+	text-align: center;
+	vertical-align: middle;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	&.fadeIn
+	{
+		@include animationSettings($keyframeSet: fadeTagsLabelIn, $duration: 0.6s);
+	}
+}

@@ -1,0 +1,11 @@
+<div>
+	{% for tags in site.data.tags %}
+
+		<span class='category' data-category-name='{{ tags[0] }}'>
+			{% for tag in tags[1] %}
+				<span class='tag'>{{ tag }}</span>
+			{% endfor %}
+		</span>
+
+	{% endfor %}
+</div>

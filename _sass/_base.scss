@@ -1,0 +1,170 @@
+/* ----------------------- IMPORTS ----------------------------- */
+
+@import 'foundation/colors';
+@import 'foundation/fonts';
+@import 'foundation/mediaQueries';
+
+/* ----------------------- BASE STYLING ----------------------------- */
+
+// Reset some basic elements
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure
+{
+    margin: 0;
+    padding: 0;
+}
+
+// Vertical spacing to maintain the flow of the page elements
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm
+{
+	margin-bottom: 15px;
+}
+
+// Set a default height for the body that can be used to adjust heights of elements
+// within the body
+body
+{
+	height: 100%;
+}
+
+// For those DIVs that only serve to help position absolutely-positioned child elements, use this class
+.absoluteContainer
+{
+	position: relative;
+}
+
+// Spacing to create better-looking lists
+ul, ol
+{
+	margin-left: 30px;
+}
+li
+{
+	> ul, > ol
+	{
+		margin-bottom: 0;
+	}
+}
+
+// Basic image formatting
+img
+{
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+// Default fonts and coloring
+body
+{
+	@extend %regularFont;
+
+    color: map-get($COLORS, darkGrayTheme);
+    background-color: map-get($COLORS, lightWhiteTheme);
+}
+
+// Figures
+figure > img
+{
+    display: block;
+}
+
+figcaption
+{
+    @extend %smallCardoFont;
+}
+
+// Headers
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: 700;
+}
+
+// Links
+a
+{
+    color: map-get($COLORS, darkBlueTheme);
+    text-decoration: none;
+
+    &:visited
+    {
+        color: darken(map-get($COLORS, darkBlueTheme), 15%);
+    }
+
+    &:hover
+    {
+		color: lighten(map-get($COLORS, darkBlueTheme), 15%);
+        text-decoration: underline;
+    }
+}
+
+// Blockquotes
+blockquote
+{
+	@extend %blockQuoteFont;
+
+	border-left:
+	{
+		width: 4px;
+		style: solid;
+		color: map-get($COLORS, grayTheme);
+	}
+
+    padding-left: 15px;
+    letter-spacing: -1px;
+
+    & > :last-child
+    {
+        margin-bottom: 0;
+    }
+}
+
+// Wrapper
+.wrapper
+{
+	margin:
+	{
+		right: auto;
+		left: auto;
+	}
+	padding:
+	{
+		right: 30px;
+		left: 30px;
+	}
+
+	max-width: 100%;
+
+	// Specialized styling for smaller devices
+    @include mediaQuery(640px)
+    {
+        max-width: 640px;
+
+		padding:
+		{
+			right: 15px;
+			left: 15px;
+		}
+    }
+}
+
+// Icons
+.icon
+{
+    & > svg
+    {
+        display: inline-block;
+		vertical-align: middle;
+
+        width: 16px;
+        height: 16px;
+
+        path
+        {
+            fill: map-get($COLORS, grayTheme);
+        }
+    }
+}

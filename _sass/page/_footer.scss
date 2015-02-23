@@ -1,0 +1,72 @@
+/* ----------------------- IMPORTS ----------------------------- */
+
+@import '../foundation/colors';
+@import '../foundation/fonts';
+
+/* ----------------------- STYLING ----------------------------- */
+
+#footerSection
+{
+	padding:
+	{
+		top: 15px;
+	}
+
+	background-color: map-get($COLORS, darkerGrayTheme);
+
+	text-align: center;
+
+	width: 100%;
+	min-height: 100px;
+
+	bottom: 0;
+}
+
+#footerLinks
+{
+	@extend %regularCardoWhiteFont;
+
+	padding:
+	{
+		bottom: 15px;
+	}
+
+
+	& > span:not(.smallDivider):hover
+	{
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+#copyrightLogo
+{
+	@extend %majorWhiteFont;
+
+	& > span
+	{
+		margin:
+		{
+			left: 10px;
+		}
+	}
+}
+
+#copyrightParagraph
+{
+	@extend %tinyWhiteFont;
+}
+
+.smallDivider
+{
+	padding:
+	{
+		left: 10px;
+		right: 10px;
+	}
+
+	&:after
+	{
+		content: "|";
+	}
+}

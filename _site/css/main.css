@@ -1,0 +1,1556 @@
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/*
+ * Functional mix-in responsible for applying styling logic only if the current device falls within width limits
+ * specified by the parameter
+ *
+ * @param $deviceWidth - the width to use to test the device
+ *
+ * @author kinsho
+ */
+/*
+ * The custom font-families that the site will use are:
+ *
+ * Source Sans Pro
+ * Cardo
+ *
+ */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300italic,400italic,600italic|Cardo:400,700,400italic|Roboto:100,300,400);
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mixin built to provide a convenient way to set basic font styles quickly
+ *
+ * @param $weight - the font weight
+ * @param $size - the font size
+ * @param $family - the font family
+ * @param $style - the font style
+ * @param $color - an optional parameter that allows one to specify a font color
+ *
+ * @author kinsho
+ */
+/* ----------------------- PLACEHOLDERS ----------------------------- */
+/* --- Italicized and bold stylings --- */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300italic,400italic,600italic|Cardo:400,700,400italic|Roboto:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300italic,400italic,600italic|Cardo:400,700,400italic|Roboto:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300italic,400italic,600italic|Cardo:400,700,400italic|Roboto:100,300,400);
+.postListingDate {
+  font-style: italic !important; }
+
+/* --- Header stylings --- */
+/* --- Normal text fonts --- */
+#copyrightParagraph {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+.postListingDate {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+figcaption {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+body {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+#footerLinks {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+/* --- Colored fonts --- */
+#copyrightParagraph {
+  color: #FFFFFF; }
+
+#footerLinks {
+  color: #FFFFFF; }
+
+#copyrightLogo {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: italic;
+  color: #F8F8F8;
+  text-shadow: 1px 1px 0 #000000; }
+
+.postListingTitle {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal;
+  color: #2A7AE2; }
+
+/* --- Mood fonts --- */
+/* --- Context fonts --- */
+blockquote {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: italic;
+  color: #898989; }
+
+#tagsLabel {
+  font-weight: 300;
+  font-size: 28px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: #898989; }
+
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/*
+ * Functional mix-in responsible for applying styling logic only if the current device falls within width limits
+ * specified by the parameter
+ *
+ * @param $deviceWidth - the width to use to test the device
+ *
+ * @author kinsho
+ */
+/* ----------------------- BASE STYLING ----------------------------- */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 15px; }
+
+body {
+  height: 100%; }
+
+.absoluteContainer {
+  position: relative; }
+
+ul, ol {
+  margin-left: 30px; }
+
+li > ul, li > ol {
+  margin-bottom: 0; }
+
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+body {
+  color: #A0A0A0;
+  background-color: #F8F8F8; }
+
+figure > img {
+  display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; }
+
+a {
+  color: #2A7AE2;
+  text-decoration: none; }
+  a:visited {
+    color: #1756a9; }
+  a:hover {
+    color: #6da4eb;
+    text-decoration: underline; }
+
+blockquote {
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #CDCDCD;
+  padding-left: 15px;
+  letter-spacing: -1px; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  max-width: 100%; }
+  @media screen and (max-width: 640px) {
+    .wrapper {
+      max-width: 640px;
+      padding-right: 15px;
+      padding-left: 15px; } }
+
+.icon > svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px; }
+  .icon > svg path {
+    fill: #CDCDCD; }
+
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/*
+ * Functional mix-in responsible for applying styling logic only if the current device falls within width limits
+ * specified by the parameter
+ *
+ * @param $deviceWidth - the width to use to test the device
+ *
+ * @author kinsho
+ */
+/*
+ * The custom font-families that the site will use are:
+ *
+ * Source Sans Pro
+ * Cardo
+ *
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mixin built to provide a convenient way to set basic font styles quickly
+ *
+ * @param $weight - the font weight
+ * @param $size - the font size
+ * @param $family - the font family
+ * @param $style - the font style
+ * @param $color - an optional parameter that allows one to specify a font color
+ *
+ * @author kinsho
+ */
+/* ----------------------- PLACEHOLDERS ----------------------------- */
+/* --- Italicized and bold stylings --- */
+.postListingDate {
+  font-style: italic !important; }
+
+/* --- Header stylings --- */
+/* --- Normal text fonts --- */
+#copyrightParagraph {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+.postListingDate {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+figcaption {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+body {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+#footerLinks {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+/* --- Colored fonts --- */
+#copyrightParagraph {
+  color: #FFFFFF; }
+
+#footerLinks {
+  color: #FFFFFF; }
+
+#copyrightLogo {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: italic;
+  color: #F8F8F8;
+  text-shadow: 1px 1px 0 #000000; }
+
+.postListingTitle {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal;
+  color: #2A7AE2; }
+
+/* --- Mood fonts --- */
+/* --- Context fonts --- */
+blockquote {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: italic;
+  color: #898989; }
+
+#tagsLabel {
+  font-weight: 300;
+  font-size: 28px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: #898989; }
+
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/*
+ * Functional mix-in responsible for applying styling logic only if the current device falls within width limits
+ * specified by the parameter
+ *
+ * @param $deviceWidth - the width to use to test the device
+ *
+ * @author kinsho
+ */
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Functional mix-in responsible for setting transitions on elements
+ *
+ * @param $property - the property or properties upon which to set transitions upon
+ * @param [$webkitProperty] - Because webkit browsers do not tolerate setting transitions upon CSS
+ *		CSS properties that it does not recognize, a separate list of properties may need to be specified
+ *		that would only be processed on webkit browsers
+ * @param [$duration] - the number of seconds the animation is expected to last
+ * @param [$timing] - the pace at which the transition will animate
+ * @param [$delay] - the number of seconds to wait before initiating the animation
+ * @param [$useBrowserSpecificReferences] - a flag indicating whether the passed property will need to have
+ *		browser-specific prefixes prepended
+ *
+ * @author kinsho
+ */
+/*
+ * Functional mix-in responsible for setting all animation-related settings across all the major browsers
+ *
+ * @param [$keyframeSet] - the name of the set of keyframes towards which to apply these settings
+ * @param [$duration] - the duration of the animation
+ * @param [$timing] - the pace at which the animation will progress
+ * @param [$delay] - the amount of time to wait before the animation begins
+ * @param [$iterations] - the number of times which to execute the animation
+ *
+ * @author kinsho
+ */
+/*
+ * Functional mix-in responsible for setting transitions on elements within webkit browsers
+ *
+ * @param $property - the property or properties upon which to set transitions upon
+ * @param [$timing] - the pace at which the transition will animate
+ * @param [$duration] - the number of seconds the animation is expected to last
+ * @param [$delay] - the number of seconds to wait before initiating the animation
+ *
+ * @author kinsho
+ */
+/*
+ * Functional mix-in responsible for setting transitions on elements within gecko browsers
+ *
+ * @param $property - the property or properties upon which to set transitions upon
+ * @param [$timing] - the pace at which the transition will animate
+ * @param [$duration] - the number of seconds the animation is expected to last
+ * @param [$delay] - the number of seconds to wait before initiating the animation
+ *
+ * @author kinsho
+ */
+/*
+ * Functional mix-in responsible for setting transitions on elements within trident browsers
+ *
+ * @param $property - the property or properties upon which to set transitions upon
+ * @param [$timing] - the pace at which the transition will animate
+ * @param [$duration] - the number of seconds the animation is expected to last
+ * @param [$delay] - the number of seconds to wait before initiating the animation
+ *
+ * @author kinsho
+ */
+/*
+ * Functional mix-in responsible for setting transitions on elements within opera browsers
+ *
+ * @param $property - the property or properties upon which to set transitions upon
+ * @param [$timing] - the pace at which the transition will animate
+ * @param [$duration] - the number of seconds the animation is expected to last
+ * @param [$delay] - the number of seconds to wait before initiating the animation
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in responsible for setting up keyframes across all the major browsers
+ * NOTE: The content to populate the body of the keyframes are provided through the use of the
+ * 		@content directive. Any invocation of this mix-in must have external content attached.
+ *
+ * @param $name - the name to assign to the keyframes being generated
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in designed to shift elements on a two-dimensional plane
+ *
+ * @param [$x] - the horizontal magnitude of the shift
+ * @param [$y] - the vertical magnitude of the shift
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in designed to scale elements on a two-dimensional plane
+ *
+ * @param [$length] - the resize multiplier to apply to the length of the element
+ * @param [$width] - the resize multiplier to apply to the width of the element
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in designed to rotate elements on a two-dimensional plane
+ *
+ * @param $degrees - the amount of rotation to apply to the element
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in designed to rotate elements on a three-dimensional plane
+ *
+ * @param $degrees - the amount of rotation to apply to the element
+ * @param $rotateByX - the x-coordinate of the rotation vector
+ * @param $rotateByY - the y-coordinate of the rotation vector
+ * @param $rotateByZ - the z-coordinate of the rotation vector 
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in designed to reset the location of the origin on a specific element
+ * Moving the point of origin around allows for a variety of different 2D and 3D rotation animations on the element
+ * Note that when setting a two-dimensional origin point, don't pass a parameter for the z-coordinate when invoking this mixin
+ *
+ * @param [$x] - the x-coordinate for the new origin coordinate
+ * @param [$y] - the y-coordinate for the new origin coordinate
+ * @param [$z] - the z-coordinate for the new origin coordinate
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in generates an animation that shifts an element either to the left or the right
+ *
+ * @param $name - the name to assign to the animation currently being defined
+ * @param $shiftMagnitude - the amount by which to shift the element toward either the left or the right
+ * 		A positive value indicates a rightward shift while a negative value denotes a leftward shift.
+ * @param [$startingPosition] - the starting position of the element, expressed as a translation percentage
+ * @param [$shiftTimingFunction] - the pacing function to apply to the shift, if provided
+ *
+ * @author kinsho
+ */
+/*
+ * Mix-in generates an animation that shifts an element either to the left or the right
+ *
+ * @param $name - the name to assign to the animation currently being defined
+ * @param $firstMagnitude - the amount by which to shift the element toward either the left or the right
+ * 		A positive value indicates a rightward shift while a negative value denotes a leftward shift.
+ * @param $secondMagnitude - the amount by which to shift the element toward either the left or the right
+ * 		after the first shift
+ * @param $shiftChange - the point in the animation at which to switch from the first shift to the second shift
+ * @param [$startingPosition] - the starting position of the element, expressed as a translation percentage
+ * @param [$firstShiftTimingFunction] - the pacing function to apply to the first shift, if provided
+ * @param [$secondShiftTimingFunction] - the pacing function to apply to the second shift, if provided
+ *
+ * @author kinsho
+ */
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/*
+ * Functional mix-in responsible for applying styling logic only if the current device falls within width limits
+ * specified by the parameter
+ *
+ * @param $deviceWidth - the width to use to test the device
+ *
+ * @author kinsho
+ */
+/*
+ * The custom font-families that the site will use are:
+ *
+ * Source Sans Pro
+ * Cardo
+ *
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mixin built to provide a convenient way to set basic font styles quickly
+ *
+ * @param $weight - the font weight
+ * @param $size - the font size
+ * @param $family - the font family
+ * @param $style - the font style
+ * @param $color - an optional parameter that allows one to specify a font color
+ *
+ * @author kinsho
+ */
+/* ----------------------- PLACEHOLDERS ----------------------------- */
+/* --- Italicized and bold stylings --- */
+.postListingDate {
+  font-style: italic !important; }
+
+/* --- Header stylings --- */
+/* --- Normal text fonts --- */
+#copyrightParagraph {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+.postListingDate {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+figcaption {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+body {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+#footerLinks {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+/* --- Colored fonts --- */
+#copyrightParagraph {
+  color: #FFFFFF; }
+
+#footerLinks {
+  color: #FFFFFF; }
+
+#copyrightLogo {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: italic;
+  color: #F8F8F8;
+  text-shadow: 1px 1px 0 #000000; }
+
+.postListingTitle {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal;
+  color: #2A7AE2; }
+
+/* --- Mood fonts --- */
+/* --- Context fonts --- */
+blockquote {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: italic;
+  color: #898989; }
+
+#tagsLabel {
+  font-weight: 300;
+  font-size: 28px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: #898989; }
+
+/* ----------------------- ANIMATIONS ----------------------------- */
+@keyframes fadeTagsLabelIn {
+  0% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; }
+  100% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; } }
+@-webkit-keyframes fadeTagsLabelIn {
+  0% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; }
+  100% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; } }
+@-moz-keyframes fadeTagsLabelIn {
+  0% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; }
+  100% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; } }
+@-ms-keyframes fadeTagsLabelIn {
+  0% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; }
+  100% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; } }
+@-o-keyframes fadeTagsLabelIn {
+  0% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; }
+  100% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; } }
+@keyframes fadeTagsLabelOut {
+  0% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; }
+  100% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; } }
+@-webkit-keyframes fadeTagsLabelOut {
+  0% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; }
+  100% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; } }
+@-moz-keyframes fadeTagsLabelOut {
+  0% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; }
+  100% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; } }
+@-ms-keyframes fadeTagsLabelOut {
+  0% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; }
+  100% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; } }
+@-o-keyframes fadeTagsLabelOut {
+  0% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1.0; }
+  100% {
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    opacity: 0.0; } }
+@keyframes exitRight {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); } }
+@-webkit-keyframes exitRight {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); } }
+@-moz-keyframes exitRight {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); } }
+@-ms-keyframes exitRight {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); } }
+@-o-keyframes exitRight {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); } }
+@keyframes exitLeft {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); } }
+@-webkit-keyframes exitLeft {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); } }
+@-moz-keyframes exitLeft {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); } }
+@-ms-keyframes exitLeft {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); } }
+@-o-keyframes exitLeft {
+  0% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); }
+  100% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); } }
+@keyframes enterFromLeft {
+  0% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-webkit-keyframes enterFromLeft {
+  0% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-moz-keyframes enterFromLeft {
+  0% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-ms-keyframes enterFromLeft {
+  0% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-o-keyframes enterFromLeft {
+  0% {
+    transform: translate(-300%, 0%);
+    -webkit-transform: translate(-300%, 0%);
+    -moz-transform: translate(-300%, 0%);
+    -ms-transform: translate(-300%, 0%);
+    -o-transform: translate(-300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@keyframes enterFromRight {
+  0% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-webkit-keyframes enterFromRight {
+  0% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-moz-keyframes enterFromRight {
+  0% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-ms-keyframes enterFromRight {
+  0% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+@-o-keyframes enterFromRight {
+  0% {
+    transform: translate(300%, 0%);
+    -webkit-transform: translate(300%, 0%);
+    -moz-transform: translate(300%, 0%);
+    -ms-transform: translate(300%, 0%);
+    -o-transform: translate(300%, 0%); }
+  100% {
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%); } }
+/* ----------------------- MIX-INS ----------------------------- */
+/**
+ * Styling for the navigational icons used to browse through the posts
+ *
+ * @author kinsho
+ *
+ */
+/* ----------------------- STYLING ----------------------------- */
+#leftPane {
+  background-color: #EEEEFF;
+  background-image: -webkit-linear-gradient(left, #EEEEFF, #F8F8F8);
+  background-image: -moz-linear-gradient(left, #EEEEFF, #F8F8F8);
+  background-image: -ms-linear-gradient(left, #EEEEFF, #F8F8F8);
+  background-image: -o-linear-gradient(left, #EEEEFF, #F8F8F8);
+  padding-left: 10px;
+  float: left;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  width: 15%;
+  height: 100%; }
+
+.divider {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #CDCDCD;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+#siteHeader {
+  margin-top: 20px;
+  height: 100px;
+  text-align: left;
+  position: relative; }
+  #siteHeader > div {
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    position: absolute;
+    left: 50%; }
+
+#postsContainer {
+  min-height: 350px;
+  z-index: 1; }
+  #postsContainer.shiftLeft {
+    animation-name: exitLeft;
+    -webkit-animation-name: exitLeft;
+    -mozilla-animation-name: exitLeft;
+    -ms-animation-name: exitLeft;
+    -o-animation-name: exitLeft;
+    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    -ms-animation-duration: 0.4s;
+    -o-animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards; }
+  #postsContainer.shiftRight {
+    animation-name: exitRight;
+    -webkit-animation-name: exitRight;
+    -mozilla-animation-name: exitRight;
+    -ms-animation-name: exitRight;
+    -o-animation-name: exitRight;
+    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    -ms-animation-duration: 0.4s;
+    -o-animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards; }
+  #postsContainer.enterFromLeft {
+    animation-name: enterFromLeft;
+    -webkit-animation-name: enterFromLeft;
+    -mozilla-animation-name: enterFromLeft;
+    -ms-animation-name: enterFromLeft;
+    -o-animation-name: enterFromLeft;
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -ms-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards; }
+  #postsContainer.enterFromRight {
+    animation-name: enterFromRight;
+    -webkit-animation-name: enterFromRight;
+    -mozilla-animation-name: enterFromRight;
+    -ms-animation-name: enterFromRight;
+    -o-animation-name: enterFromRight;
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -ms-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards; }
+
+.postListingDate {
+  margin-top: 10px; }
+
+.postListingTitle {
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+  transition-delay: 0s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-timing-function: linear;
+  -webkit-transition-duration: 0.1s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-property: opacity;
+  -moz-transition-timing-function: linear;
+  -moz-transition-duration: 0.1s;
+  -moz-transition-delay: 0s;
+  -ms-transition-property: opacity;
+  -ms-transition-timing-function: linear;
+  -ms-transition-duration: 0.1s;
+  -ms-transition-delay: 0s;
+  -o-transition-property: opacity;
+  -o-transition-timing-function: linear;
+  -o-transition-duration: 0.1s;
+  -o-transition-delay: 0s;
+  margin-bottom: 10px;
+  cursor: pointer;
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .postListingTitle:hover {
+    opacity: 0.55; }
+
+#leftPostIndexNavigator {
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-timing-function: linear;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-property: opacity;
+  -moz-transition-timing-function: linear;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-delay: 0s;
+  -ms-transition-property: opacity;
+  -ms-transition-timing-function: linear;
+  -ms-transition-duration: 0.2s;
+  -ms-transition-delay: 0s;
+  -o-transition-property: opacity;
+  -o-transition-timing-function: linear;
+  -o-transition-duration: 0.2s;
+  -o-transition-delay: 0s;
+  font-size: 30px;
+  color: #2A7AE2;
+  cursor: pointer;
+  opacity: 0.8;
+  margin-right: 50px; }
+  #leftPostIndexNavigator.disabled {
+    opacity: 0.2;
+    cursor: default; }
+
+#rightPostIndexNavigator {
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-timing-function: linear;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-property: opacity;
+  -moz-transition-timing-function: linear;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-delay: 0s;
+  -ms-transition-property: opacity;
+  -ms-transition-timing-function: linear;
+  -ms-transition-duration: 0.2s;
+  -ms-transition-delay: 0s;
+  -o-transition-property: opacity;
+  -o-transition-timing-function: linear;
+  -o-transition-duration: 0.2s;
+  -o-transition-delay: 0s;
+  font-size: 30px;
+  color: #2A7AE2;
+  cursor: pointer;
+  opacity: 0.8;
+  margin-left: 50px; }
+  #rightPostIndexNavigator.disabled {
+    opacity: 0.2;
+    cursor: default; }
+
+#tagsContainer {
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-timing-function: linear;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-property: opacity;
+  -moz-transition-timing-function: linear;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-delay: 0s;
+  -ms-transition-property: opacity;
+  -ms-transition-timing-function: linear;
+  -ms-transition-duration: 0.2s;
+  -ms-transition-delay: 0s;
+  -o-transition-property: opacity;
+  -o-transition-timing-function: linear;
+  -o-transition-duration: 0.2s;
+  -o-transition-delay: 0s;
+  opacity: 1.0;
+  cursor: pointer; }
+  #tagsContainer:hover {
+    opacity: 0.15; }
+
+#tagCloud {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  width: 170px;
+  height: 300px; }
+
+#tagsLabel {
+  animation-name: fadeTagsLabelOut;
+  -webkit-animation-name: fadeTagsLabelOut;
+  -mozilla-animation-name: fadeTagsLabelOut;
+  -ms-animation-name: fadeTagsLabelOut;
+  -o-animation-name: fadeTagsLabelOut;
+  animation-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  -ms-animation-duration: 0.4s;
+  -o-animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+  #tagsLabel.fadeIn {
+    animation-name: fadeTagsLabelIn;
+    -webkit-animation-name: fadeTagsLabelIn;
+    -mozilla-animation-name: fadeTagsLabelIn;
+    -ms-animation-name: fadeTagsLabelIn;
+    -o-animation-name: fadeTagsLabelIn;
+    animation-duration: 0.6s;
+    -webkit-animation-duration: 0.6s;
+    -moz-animation-duration: 0.6s;
+    -ms-animation-duration: 0.6s;
+    -o-animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards; }
+
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- IMPORTS ----------------------------- */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mix-in designed to render a gradient background on a particular element
+ * Works across all major browsers
+ *
+ * @param $initialColor - the color which will launch the gradient
+ * @param $endColor - the color which will mark the tail of the rendered gradient
+ * @param $direction - the direction in which the gradient will render across the background of the element
+ *
+ * @author kinsho
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/*
+ * Functional mix-in responsible for applying styling logic only if the current device falls within width limits
+ * specified by the parameter
+ *
+ * @param $deviceWidth - the width to use to test the device
+ *
+ * @author kinsho
+ */
+/*
+ * The custom font-families that the site will use are:
+ *
+ * Source Sans Pro
+ * Cardo
+ *
+ */
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+/* ----------------------- MIX-INS ----------------------------- */
+/*
+ * Mixin built to provide a convenient way to set basic font styles quickly
+ *
+ * @param $weight - the font weight
+ * @param $size - the font size
+ * @param $family - the font family
+ * @param $style - the font style
+ * @param $color - an optional parameter that allows one to specify a font color
+ *
+ * @author kinsho
+ */
+/* ----------------------- PLACEHOLDERS ----------------------------- */
+/* --- Italicized and bold stylings --- */
+.postListingDate {
+  font-style: italic !important; }
+
+/* --- Header stylings --- */
+/* --- Normal text fonts --- */
+#copyrightParagraph {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+.postListingDate {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+figcaption {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+body {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal; }
+
+#footerLinks {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: normal; }
+
+/* --- Colored fonts --- */
+#copyrightParagraph {
+  color: #FFFFFF; }
+
+#footerLinks {
+  color: #FFFFFF; }
+
+#copyrightLogo {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Source Sans Pro, sans-serif;
+  font-style: italic;
+  color: #F8F8F8;
+  text-shadow: 1px 1px 0 #000000; }
+
+.postListingTitle {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: Cardo, sans-serif;
+  font-style: normal;
+  color: #2A7AE2; }
+
+/* --- Mood fonts --- */
+/* --- Context fonts --- */
+blockquote {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Cardo, sans-serif;
+  font-style: italic;
+  color: #898989; }
+
+#tagsLabel {
+  font-weight: 300;
+  font-size: 28px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: #898989; }
+
+/* ----------------------- STYLING ----------------------------- */
+#footerSection {
+  padding-top: 15px;
+  background-color: #898989;
+  text-align: center;
+  width: 100%;
+  min-height: 100px;
+  bottom: 0; }
+
+#footerLinks {
+  padding-bottom: 15px; }
+  #footerLinks > span:not(.smallDivider):hover {
+    text-decoration: underline;
+    cursor: pointer; }
+
+#copyrightLogo > span {
+  margin-left: 10px; }
+
+.smallDivider {
+  padding-left: 10px;
+  padding-right: 10px; }
+  .smallDivider:after {
+    content: "|"; }
+
+/* ----------------------- LAYOUT STYLING ----------------------------- */
+.body {
+  display: inline-block;
+  width: 100%; }
+
+@media screen and (max-width: 640px) {
+  .footerCol1, .footerCol2 {
+    width: calc(50% - 15); }
+
+  .footerCol3 {
+    width: calc(100% - 15); } }
+@media screen and (max-width: 480px) {
+  .footerCol {
+    float: none;
+    width: calc(100% - 15); } }
+.pageContent {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  float: right;
+  width: 80%;
+  height: 100%;
+  display: inline-block;
+  z-index: 2; }
+
+.postContent {
+  margin-bottom: 30px; }
+
+/*
+ * Even though there's nothing in this file, the file has to be kept around. The Jekyll compiler refuses to serve the blog without the presence of this file
+ */

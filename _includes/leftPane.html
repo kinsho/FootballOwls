@@ -1,0 +1,52 @@
+<div id="leftPane">
+
+	<header id="siteHeader">
+		<div class="wrapper">
+			<h1 data-root-url="{{ site.baseurl }}/">{{ site.title }}</h1>
+		</div>
+	</header>
+
+	<div class="divider"></div>
+
+	<div id='postsContainer'>
+		{% for post in site.posts %}
+			<div class='postListingDate'>
+				{{ post.date | date: "%B %d, %Y" }}
+			</div>
+			<div class='postListingTitle'>
+				{{ post.title }}
+			</div>
+		{% endfor %}
+	</div>
+
+	<div>
+		<span id="leftPostIndexNavigator" class='disabled' data-page-number="-1"><i class="fa fa-arrow-circle-o-left"></i></span>
+		<span id="rightPostIndexNavigator" data-page-number="1"><i class="fa fa-arrow-circle-o-right"></i></span>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class='absoluteContainer'>
+		<div id='tagsLabel'>B R O W S E<br />T A G S</div>
+		<div id='tagsContainer'>
+			{% for tags in site.data.tags %}
+				<span class='category' data-category-name='{{ tags[0] }}'>
+					{% for tag in tags[1] %}
+						<span class='tag'>{{ tag }}</span>
+					{% endfor %}
+				</span>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="trigger">
+		{% for page in site.pages %}
+			{% if page.title %}
+				<a class="pageLink" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+</div>

@@ -1,2 +1,9 @@
 *.iml
-.idea/
+feed.xml
+_assets
+.sass-cache
+.idea
+analysis/info
+css
+scripts/library
+_site/analysis

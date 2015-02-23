@@ -1,0 +1,17 @@
+/* ----------------------- LOCAL CONSTANTS ----------------------------- */
+
+/*
+ * Functional mix-in responsible for applying styling logic only if the current device falls within width limits
+ * specified by the parameter
+ *
+ * @param $deviceWidth - the width to use to test the device
+ *
+ * @author kinsho
+ */
+@mixin mediaQuery($deviceWidth)
+{
+	@media screen and (max-width: $deviceWidth)
+	{
+		@content;
+	}
+}

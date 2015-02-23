@@ -1,0 +1,60 @@
+/* ----------------------- IMPORTS ----------------------------- */
+
+@import 'foundation/fonts';
+@import 'foundation/colors';
+@import 'foundation/mediaQueries';
+
+@import 'page/leftPane';
+@import 'page/footer';
+
+/* ----------------------- LAYOUT STYLING ----------------------------- */
+
+.body
+{
+	display: inline-block;
+	width: 100%;
+}
+
+@include mediaQuery(640px)
+{
+    .footerCol1, .footerCol2
+    {
+        width: calc(50% - 15);
+    }
+
+    .footerCol3
+    {
+		width: calc(100% - 15);
+    }
+}
+
+@include mediaQuery(480px)
+{
+    .footerCol
+    {
+        float: none;
+		width: calc(100% - 15);
+    }
+}
+
+.pageContent
+{
+    padding:
+	{
+		top: 30px;
+		bottom: 30px;
+	}
+
+	float: right;
+	width: 80%;
+	height: 100%;
+
+	display: inline-block;
+
+	z-index: 2;
+}
+
+.postContent
+{
+	margin-bottom: 30px;
+}

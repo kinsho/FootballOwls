@@ -1,0 +1,34 @@
+/* ----------------------- IMPORTS ----------------------------- */
+
+@import '../foundation/colors';
+@import '../foundation/animations';
+@import '../foundation/fonts';
+
+/* ----------------------- ANIMATIONS ----------------------------- */
+
+/* ----------------------- MIX-INS ----------------------------- */
+
+/* ----------------------- STYLING ----------------------------- */
+
+.tagsParentHeader
+{
+	border:
+	{
+		radius: 10px;
+	}
+
+	height: 100px;
+	background-color: map-get($COLORS, darkGrayTheme);
+}
+
+.tagsContainerBody
+{
+	@include transitionSettings($property: height, $timing: ease-in-out, $duration: 0.5s);
+
+	height: 0px;
+
+	&.reveal
+	{
+		height: auto;
+	}
+}
