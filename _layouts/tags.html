@@ -1,11 +1,54 @@
-<div>
-	{% for tags in site.data.tags %}
+---
+layout: default
+---
 
-		<span class='category' data-category-name='{{ tags[0] }}'>
+<h3>Tags</h3>
+
+{% for tags in site.data.tags %}
+
+	<div class='tagContainerWrapper'>
+
+		<div class='tagParentContainer' data-category-name='{{ tags[0] }}'>
+
+			<div class='tagParentHeader'>{{ tags[0] }}</div>
+
 			{% for tag in tags[1] %}
-				<span class='tag'>{{ tag }}</span>
-			{% endfor %}
-		</span>
 
-	{% endfor %}
-</div>
+				<!-- The liquid flag below will determine if the tag in context has any posts associated with it -->
+				<!-- Useful when figuring out whether to output a message indicating that no articles have been found that associate with the tag -->
+				{% assign hasAssociatedPosts = false %}
+
+				<div class='tagContainer'>
+					<div class='tagHeader'>{{ tag }}</div>
+
+						{% for post in site.posts %}
+							{% for postTag in post.tags %}
+
+								{% if postTag == tag %}
+
+									{% assign hasAssociatedPosts = true %}
+
+										<div class='tagLink'>
+											{{ post.date | date: "%B %d, %Y" }}
+											{{ post.title }}
+										</div>
+
+								{% endif %}
+
+							{% endfor %}
+						{% endfor %}
+
+					{% if hasAssociatedPosts == false %}
+						<div class='noLink'>
+							-- No articles found --
+						</div>
+					{% endif %}
+				</div>
+
+			{% endfor %}
+
+		</div>
+
+	</div>
+
+{% endfor %}

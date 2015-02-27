@@ -10,25 +10,105 @@
 
 /* ----------------------- STYLING ----------------------------- */
 
-.tagsParentHeader
+.tagContainerWrapper
 {
 	border:
 	{
+		style: solid;
+		width: 2px;
+		color: map-get($COLORS, blueTheme);
 		radius: 10px;
 	}
 
-	height: 100px;
-	background-color: map-get($COLORS, darkGrayTheme);
+	padding: 15px;
+
+	text-align: left;
 }
 
-.tagsContainerBody
+.tagParentContainer
 {
-	@include transitionSettings($property: height, $timing: ease-in-out, $duration: 0.5s);
+	@include transitionSettings($property: height, $timing: ease-out, $duration: 0.5s);
 
-	height: 0px;
+	border:
+	{
+		style: solid;
+		width: 4px;
+		color: map-get($COLORS, lightWhiteTheme);
+		radius: 10px;
+	}
+
+	text-align: left;
+
+	height: 60px;
+	overflow: hidden;
+}
+
+.tagParentHeader
+{
+	@extend %veryMajorWhiteFont;
+
+	border:
+	{
+		style: solid;
+		width: 2px;
+		color: map-get($COLORS, darkGrayTheme);
+		radius: 10px;
+	}
+
+	padding: 10px;
+
+	background-color: map-get($COLORS, lightGreenTheme);
+	cursor: pointer;
+}
+
+.tagContainer
+{
+	@include transitionSettings($property: height, $timing: ease-out, $duration: 0.5s);
+
+	border:
+	{
+		radius: 10px;
+		color: map-get($COLORS, darkGrayTheme);
+	}
+
+	display: none;
 
 	&.reveal
 	{
 		height: auto;
 	}
+}
+
+.tagHeader
+{
+	@extend %regularPlusFont;
+
+	padding:
+	{
+		top: 10px;
+		bottom: 10px;
+	}
+
+	display: none;
+
+	background-color: map-get($COLORS, lightGrayTheme);
+	cursor: pointer;
+}
+
+.tagLink
+{
+	margin:
+	{
+		top: 15px;
+	}
+
+	&:last-of-type
+	{
+		margin:
+		{
+			bottom: 15px;
+		}
+	}
+
+	display: none;
 }
