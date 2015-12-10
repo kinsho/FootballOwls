@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+	<!-- Forcing IE to adhere to standards here -->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- Load all files stored remotely below -->
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+	<!-- Load all the CSS files for this page -->
+        {{#cssFiles}}
+			<link rel="stylesheet" type="text/css" href='{{path}}'/>
+        {{/cssFiles }}
+	</head>
+	<body>
+
+		<!-- All the charts and tables will be placed here -->
+		<div class='content'>
+		    {{content}}
+		</div>
+
+        <!-- Load the bootloading scripts along with the base script that is responsible for instantiating all other
+            scripts relevant to the page -->
+        <script src="client/scripts/jspm_packages/system.src.js" ></script>
+		<script src="client/scripts/jspm_config.js"></script>
+		<script>
+			System.import("{{launchScript}}");
+		</script>
+
+		<!-- Data to be bootstrapped when the page loads -->
+        <script>
+            window.FootballOwls = {{{initialData}}};
+        </script>
+
+	</body>
+</html>

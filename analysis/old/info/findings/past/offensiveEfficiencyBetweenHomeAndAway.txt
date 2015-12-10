@@ -1,0 +1,189 @@
+
+~~~~~~~~~~~~    Differences in Offensive Yardage between Home and Away     ~~~~~~~~~~~~~
+~~~~~~~~~~~~    Offensive Yardage Expressed as Passing Yards plus Rushing Yards * 3 over Runs and Passes Attempted     ~~~~~~~~~~~~~
+~~~~~~~~~~~~    Negative Values Imply Better Offensive Performance on Road  ~~~~~~~~~~~~
+
+======================
+2009
+======================
+
+Jets  -------->   -1.312
+Buccaneers  -------->   -1.29
+Packers  -------->   -1.265
+Colts  -------->   -1.129
+Cardinals  -------->   -0.924
+Panthers  -------->   -0.862
+Jaguars  -------->   -0.825
+Chiefs  -------->   -0.728
+Falcons  -------->   -0.485
+Bengals  -------->   -0.131
+Browns  -------->   -0.099
+Raiders  -------->   0.017
+Steelers  -------->   0.061
+Chargers  -------->   0.082
+Broncos  -------->   0.133
+Redskins  -------->   0.143
+49ers  -------->   0.416
+Seahawks  -------->   0.462
+Texans  -------->   0.471
+Saints  -------->   0.537
+Eagles  -------->   0.604
+Dolphins  -------->   0.607
+Vikings  -------->   0.646
+Giants  -------->   0.699
+Rams  -------->   0.701
+Bears  -------->   0.752
+Patriots  -------->   0.877
+Ravens  -------->   0.98
+Lions  -------->   1.222
+Bills  -------->   1.532
+Cowboys  -------->   1.786
+Titans  -------->   2.576
+
+======================
+2010
+======================
+
+Eagles  -------->   -1.409
+Rams  -------->   -1.05
+Saints  -------->   -0.957
+Colts  -------->   -0.633
+Browns  -------->   -0.542
+Jets  -------->   -0.524
+Cowboys  -------->   -0.305
+Bills  -------->   -0.246
+Raiders  -------->   -0.156
+Jaguars  -------->   -0.154
+Dolphins  -------->   -0.073
+Panthers  -------->   0.004
+Seahawks  -------->   0.042
+Redskins  -------->   0.098
+Vikings  -------->   0.125
+Cardinals  -------->   0.175
+Buccaneers  -------->   0.268
+Giants  -------->   0.324
+Steelers  -------->   0.419
+Chargers  -------->   0.453
+Falcons  -------->   0.575
+Lions  -------->   0.622
+Bengals  -------->   0.679
+Texans  -------->   0.72
+Broncos  -------->   0.836
+Packers  -------->   0.911
+Bears  -------->   0.94
+Titans  -------->   1.069
+Chiefs  -------->   1.152
+49ers  -------->   1.26
+Patriots  -------->   1.626
+Ravens  -------->   1.797
+
+======================
+2011
+======================
+
+Dolphins  -------->   -1.684
+Buccaneers  -------->   -0.695
+Chargers  -------->   -0.67
+Broncos  -------->   -0.54
+Titans  -------->   -0.496
+Bears  -------->   -0.456
+Rams  -------->   -0.307
+Ravens  -------->   -0.274
+Colts  -------->   -0.226
+Patriots  -------->   -0.198
+Vikings  -------->   -0.168
+Giants  -------->   -0.013
+Packers  -------->   0.039
+Texans  -------->   0.058
+Chiefs  -------->   0.062
+Browns  -------->   0.133
+Panthers  -------->   0.176
+49ers  -------->   0.211
+Redskins  -------->   0.216
+Eagles  -------->   0.36
+Cardinals  -------->   0.395
+Jaguars  -------->   0.534
+Bengals  -------->   0.608
+Jets  -------->   0.638
+Seahawks  -------->   0.672
+Falcons  -------->   0.843
+Raiders  -------->   1.009
+Bills  -------->   1.128
+Lions  -------->   1.158
+Cowboys  -------->   1.496
+Steelers  -------->   1.792
+Saints  -------->   2.245
+
+======================
+2012
+======================
+
+Browns  -------->   -1.029
+Panthers  -------->   -1.026
+Bears  -------->   -0.989
+Colts  -------->   -0.646
+Cowboys  -------->   -0.589
+Steelers  -------->   -0.492
+Jaguars  -------->   -0.488
+Packers  -------->   -0.399
+Patriots  -------->   -0.34
+Bengals  -------->   -0.307
+Texans  -------->   -0.236
+Falcons  -------->   -0.235
+Rams  -------->   -0.081
+Lions  -------->   -0.064
+Cardinals  -------->   -0.01
+Eagles  -------->   0.1
+Saints  -------->   0.151
+Bills  -------->   0.178
+Raiders  -------->   0.264
+Buccaneers  -------->   0.343
+Titans  -------->   0.346
+Jets  -------->   0.497
+Chargers  -------->   0.532
+Broncos  -------->   0.631
+Vikings  -------->   0.642
+Seahawks  -------->   0.802
+Redskins  -------->   0.834
+49ers  -------->   1.139
+Ravens  -------->   1.252
+Chiefs  -------->   1.264
+Giants  -------->   1.293
+Dolphins  -------->   1.666
+
+======================
+2013
+======================
+
+Giants  -------->   -0.986
+Falcons  -------->   -0.659
+Broncos  -------->   -0.606
+Chargers  -------->   -0.549
+Bears  -------->   -0.417
+Seahawks  -------->   -0.317
+Eagles  -------->   -0.289
+Redskins  -------->   -0.236
+Colts  -------->   -0.19
+Ravens  -------->   0.022
+Buccaneers  -------->   0.047
+Packers  -------->   0.091
+49ers  -------->   0.188
+Jets  -------->   0.19
+Browns  -------->   0.201
+Cardinals  -------->   0.281
+Jaguars  -------->   0.283
+Bengals  -------->   0.292
+Chiefs  -------->   0.292
+Titans  -------->   0.306
+Steelers  -------->   0.352
+Raiders  -------->   0.492
+Patriots  -------->   0.616
+Cowboys  -------->   0.635
+Dolphins  -------->   0.792
+Bills  -------->   0.836
+Panthers  -------->   0.981
+Vikings  -------->   0.992
+Rams  -------->   1.012
+Texans  -------->   1.044
+Lions  -------->   1.164
+Saints  -------->   1.717

@@ -1,0 +1,39 @@
+
+~~~~~~~~~~~~    Passing Yardage Late in the Season (Expressed as Passing Yards over Passes Attempted)    ~~~~~~~~~~~~~
+
+======================
+2014
+======================
+
+Jaguars  -------->   5.022
+Raiders  -------->   5.506
+Buccaneers  -------->   5.741
+Browns  -------->   5.763
+Bears  -------->   5.842
+Texans  -------->   6.0
+Titans  -------->   6.118
+49ers  -------->   6.206
+Colts  -------->   6.211
+Cardinals  -------->   6.276
+Patriots  -------->   6.503
+Lions  -------->   6.507
+Bills  -------->   6.526
+Chargers  -------->   6.593
+Ravens  -------->   6.691
+Panthers  -------->   6.817
+Bengals  -------->   6.836
+Saints  -------->   7.082
+Dolphins  -------->   7.398
+Chiefs  -------->   7.441
+Rams  -------->   7.5
+Packers  -------->   7.532
+Eagles  -------->   7.567
+Falcons  -------->   7.773
+Redskins  -------->   7.933
+Giants  -------->   8.21
+Broncos  -------->   8.232
+Seahawks  -------->   8.551
+Steelers  -------->   9.036
+Vikings  -------->   9.176
+Cowboys  -------->   9.196
+Jets  -------->   9.36

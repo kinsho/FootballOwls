@@ -1,0 +1,40 @@
+
+~~~~~~~~~~~~    Passing Yardage Improvement Differential Between Home and Away (Expressed as Passing Yards over Passes Attempted)    ~~~~~~~~~~~~~
+~~~~~~~~~~~~    Negative values indicate that the team performs better passing on the road  ~~~~~~~~~~~~~~~~~~
+
+======================
+2014
+======================
+
+Saints  -------->   -0.992
+Jets  -------->   -0.871
+Seahawks  -------->   -0.751
+Buccaneers  -------->   -0.748
+Redskins  -------->   -0.521
+Titans  -------->   -0.37
+Jaguars  -------->   -0.281
+Bills  -------->   -0.27
+Bears  -------->   -0.225
+49ers  -------->   -0.198
+Chargers  -------->   -0.151
+Eagles  -------->   -0.135
+Texans  -------->   -0.121
+Cowboys  -------->   -0.108
+Giants  -------->   0.021
+Dolphins  -------->   0.145
+Patriots  -------->   0.265
+Colts  -------->   0.317
+Rams  -------->   0.342
+Browns  -------->   0.412
+Ravens  -------->   0.529
+Panthers  -------->   0.555
+Cardinals  -------->   0.577
+Chiefs  -------->   0.585
+Vikings  -------->   0.636
+Bengals  -------->   0.811
+Falcons  -------->   1.394
+Raiders  -------->   1.423
+Steelers  -------->   1.483
+Broncos  -------->   1.672
+Lions  -------->   1.69
+Packers  -------->   2.067

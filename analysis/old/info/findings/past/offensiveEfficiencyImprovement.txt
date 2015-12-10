@@ -1,0 +1,187 @@
+
+~~~~~~~~~~~~    Offensive Yardage Improvement Over The Season (Expressed as Passing Yards plus Rushing Yards * 3 over Runs and Passes Attempted)    ~~~~~~~~~~~~~
+
+======================
+2009
+======================
+
+Saints  -------->   -2.12
+Colts  -------->   -1.913
+Rams  -------->   -1.606
+Jaguars  -------->   -1.22
+Broncos  -------->   -1.162
+Jets  -------->   -0.808
+Redskins  -------->   -0.746
+Cardinals  -------->   -0.555
+Bengals  -------->   -0.425
+Chargers  -------->   -0.42
+Buccaneers  -------->   -0.418
+Dolphins  -------->   -0.417
+Eagles  -------->   -0.37
+Cowboys  -------->   -0.341
+Vikings  -------->   -0.325
+Steelers  -------->   -0.263
+Giants  -------->   -0.238
+49ers  -------->   -0.017
+Patriots  -------->   0.101
+Lions  -------->   0.106
+Bears  -------->   0.111
+Titans  -------->   0.177
+Seahawks  -------->   0.244
+Falcons  -------->   0.313
+Packers  -------->   0.328
+Panthers  -------->   0.664
+Raiders  -------->   0.744
+Bills  -------->   0.749
+Texans  -------->   0.831
+Ravens  -------->   2.733
+Chiefs  -------->   2.996
+Browns  -------->   3.045
+
+======================
+2010
+======================
+
+Chiefs  -------->   -1.721
+Vikings  -------->   -1.527
+Saints  -------->   -1.455
+Falcons  -------->   -1.249
+Dolphins  -------->   -0.97
+Browns  -------->   -0.87
+Seahawks  -------->   -0.572
+Bears  -------->   -0.479
+Giants  -------->   -0.436
+Rams  -------->   -0.397
+Jets  -------->   -0.383
+Texans  -------->   -0.321
+Cardinals  -------->   -0.23
+Titans  -------->   -0.226
+Chargers  -------->   -0.158
+Bills  -------->   -0.133
+Redskins  -------->   -0.084
+Broncos  -------->   -0.078
+Eagles  -------->   0.019
+Steelers  -------->   0.323
+49ers  -------->   0.324
+Bengals  -------->   0.411
+Jaguars  -------->   0.432
+Cowboys  -------->   0.469
+Ravens  -------->   0.502
+Packers  -------->   0.515 <------ FIXED (Aaron Rodgers was injured and James Stark did not have significant role on team until postseason)
+Patriots  -------->   0.816
+Colts  -------->   0.99
+Raiders  -------->   1.472
+Panthers  -------->   1.481
+Lions  -------->   1.543
+Buccaneers  -------->   2.483
+
+======================
+2011
+======================
+
+49ers  -------->   -1.171
+Eagles  -------->   -1.029
+Cardinals  -------->   -0.957
+Buccaneers  -------->   -0.871
+Colts  -------->   -0.774
+Cowboys  -------->   -0.368
+Bengals  -------->   -0.327
+Bears  -------->   -0.175
+Raiders  -------->   -0.168
+Broncos  -------->   -0.022
+Jets  -------->   0.029
+Vikings  -------->   0.057
+Seahawks  -------->   0.066
+Titans  -------->   0.088
+Bills  -------->   0.129
+Patriots  -------->   0.247
+Browns  -------->   0.256
+Lions  -------->   0.282
+Rams  -------->   0.424
+Chiefs  -------->   0.433
+Falcons  -------->   0.494
+Chargers  -------->   0.498
+Packers  -------->   0.581
+Giants  -------->   0.604
+Dolphins  -------->   0.65
+Texans  -------->   0.794
+Steelers  -------->   0.95
+Jaguars  -------->   0.997
+Saints  -------->   1.012
+Redskins  -------->   1.154
+Ravens  -------->   1.48
+Panthers  -------->   1.888
+
+======================
+2012
+======================
+
+Eagles  -------->   -1.563
+Chargers  -------->   -1.396
+Buccaneers  -------->   -1.29
+Bengals  -------->   -1.266
+Cardinals  -------->   -1.178
+Rams  -------->   -1.162
+49ers  -------->   -0.929
+Colts  -------->   -0.857
+Lions  -------->   -0.841
+Bills  -------->   -0.756
+Falcons  -------->   -0.494
+Patriots  -------->   -0.484
+Titans  -------->   -0.317
+Raiders  -------->   -0.267
+Redskins  -------->   -0.177
+Texans  -------->   -0.134
+Cowboys  -------->   -0.081
+Steelers  -------->   -0.022
+Jets  -------->   0.139
+Broncos  -------->   0.185
+Bears  -------->   0.208
+Dolphins  -------->   0.237
+Vikings  -------->   0.496
+Giants  -------->   0.6
+Jaguars  -------->   0.656
+Packers  -------->   0.692
+Browns  -------->   0.725
+Panthers  -------->   0.816
+Saints  -------->   0.892
+Ravens  -------->   1.283 <-------- FIXED (Joe Flacco and Ray Rice did not play the last game of the season)
+Chiefs  -------->   1.44
+Seahawks  -------->   3.56
+
+======================
+2013
+======================
+
+Redskins  -------->   -2.047
+Seahawks  -------->   -1.732
+Lions  -------->   -1.486
+Texans  -------->   -1.401
+Giants  -------->   -1.02
+Buccaneers  -------->   -1.001
+Raiders  -------->   -0.976
+Falcons  -------->   -0.949
+Rams  -------->   -0.616
+Colts  -------->   -0.463
+Packers  -------->   -0.414
+Bengals  -------->   -0.407
+Ravens  -------->   -0.346
+Broncos  -------->   -0.316
+Saints  -------->   -0.192
+Dolphins  -------->   -0.14
+Chargers  -------->   0.023
+Titans  -------->   0.038
+Cardinals  -------->   0.274
+Panthers  -------->   0.362
+Vikings  -------->   0.409
+Patriots  -------->   0.66
+Bills  -------->   0.696
+Jets  -------->   0.748
+Steelers  -------->   0.764
+Browns  -------->   0.912
+Bears  -------->   0.943
+49ers  -------->   1.063
+Jaguars  -------->   1.114
+Chiefs  -------->   1.344
+Cowboys  -------->   1.404
+Eagles  -------->   1.942

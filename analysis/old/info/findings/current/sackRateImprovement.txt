@@ -1,0 +1,40 @@
+
+~~~~~~~~~~~~    Sack Rate Improvement Over The Season (expressed as the number of passes attempted on the   ~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       defense over the number of sacks)    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+======================
+2014
+======================
+
+Raiders  -------->   -19.427
+Falcons  -------->   -13.125
+Steelers  -------->   -11.071
+Seahawks  -------->   -10.743
+Giants  -------->   -9.401
+Cowboys  -------->   -7.778
+Panthers  -------->   -7.775
+Jets  -------->   -5.5
+49ers  -------->   -5.2
+Texans  -------->   -5.135
+Lions  -------->   -5.008
+Ravens  -------->   -4.787
+Buccaneers  -------->   -4.362
+Patriots  -------->   -4.25
+Browns  -------->   -3.752
+Saints  -------->   -3.375
+Packers  -------->   -3.261
+Rams  -------->   -2.917
+Chargers  -------->   -2.639
+Bengals  -------->   -1.0
+Chiefs  -------->   -0.723
+Bears  -------->   -0.559
+Cardinals  -------->   -0.158
+Redskins  -------->   2.0
+Broncos  -------->   3.681
+Titans  -------->   4.839
+Jaguars  -------->   6.078
+Eagles  -------->   7.548
+Vikings  -------->   8.462
+Colts  -------->   8.714
+Dolphins  -------->   14.667
+Bills  -------->   17.188

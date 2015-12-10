@@ -1,0 +1,187 @@
+
+~~~~~~~~~~~~    Offensive Yardage Efficiency Late in the Season (Expressed as Passing Yards plus Rushing Yards * 2.2 over Runs and Passes Attempted)    ~~~~~~~~~~~~~
+
+======================
+2009
+======================
+
+Rams  -------->   5.998
+Colts  -------->   6.246
+Buccaneers  -------->   6.921
+Broncos  -------->   7.033
+Redskins  -------->   7.14
+Lions  -------->   7.148
+Seahawks  -------->   7.37
+Cardinals  -------->   7.382
+Saints  -------->   7.411
+Jaguars  -------->   7.427
+Bengals  -------->   7.464
+Bears  -------->   7.517
+49ers  -------->   7.566
+Dolphins  -------->   7.569
+Chargers  -------->   7.764
+Falcons  -------->   7.897
+Raiders  -------->   7.934
+Jets  -------->   8.066
+Vikings  -------->   8.208
+Giants  -------->   8.231
+Eagles  -------->   8.239
+Patriots  -------->   8.363
+Texans  -------->   8.525
+Bills  -------->   8.532
+Steelers  -------->   8.558
+Packers  -------->   8.966
+Cowboys  -------->   8.989
+Panthers  -------->   9.146
+Titans  -------->   9.168
+Browns  -------->   9.524
+Chiefs  -------->   9.806
+Ravens  -------->   10.719
+
+======================
+2010
+======================
+
+Falcons  -------->   6.398
+Rams  -------->   6.548
+Saints  -------->   6.579
+Dolphins  -------->   6.626
+Seahawks  -------->   6.754
+Vikings  -------->   6.872
+Browns  -------->   6.984
+Cardinals  -------->   7.004
+Chiefs  -------->   7.394
+Bengals  -------->   7.517
+Bears  -------->   7.535
+Bills  -------->   7.676
+Packers  -------->   7.689
+Redskins  -------->   7.757
+Broncos  -------->   7.819
+Jets  -------->   7.873
+Titans  -------->   7.877
+Colts  -------->   8.173
+Ravens  -------->   8.219
+49ers  -------->   8.305
+Giants  -------->   8.348
+Cowboys  -------->   8.453
+Lions  -------->   8.463
+Panthers  -------->   8.474
+Chargers  -------->   8.603
+Texans  -------->   8.655
+Steelers  -------->   8.787
+Jaguars  -------->   9.12
+Patriots  -------->   9.3
+Eagles  -------->   9.446
+Raiders  -------->   10.105
+Buccaneers  -------->   10.512
+
+======================
+2011
+======================
+
+Colts  -------->   6.775
+Buccaneers  -------->   6.87
+Browns  -------->   6.948
+49ers  -------->   7.244
+Bengals  -------->   7.249
+Cardinals  -------->   7.321
+Jets  -------->   7.359
+Rams  -------->   7.547
+Titans  -------->   7.645
+Seahawks  -------->   7.713
+Chiefs  -------->   7.875
+Jaguars  -------->   7.9
+Bears  -------->   8.242
+Cowboys  -------->   8.339
+Falcons  -------->   8.4
+Bills  -------->   8.439
+Lions  -------->   8.452
+Eagles  -------->   8.456
+Redskins  -------->   8.522
+Giants  -------->   8.523
+Broncos  -------->   8.701
+Raiders  -------->   8.725
+Vikings  -------->   8.763
+Dolphins  -------->   8.802
+Patriots  -------->   8.886
+Chargers  -------->   8.945
+Ravens  -------->   9.138
+Steelers  -------->   9.472
+Packers  -------->   9.511
+Texans  -------->   9.574
+Saints  -------->   10.064
+Panthers  -------->   11.2
+
+======================
+2012
+======================
+
+Cardinals  -------->   5.38
+Chargers  -------->   6.19
+Eagles  -------->   6.772
+Colts  -------->   6.873
+Bengals  -------->   6.91
+Rams  -------->   6.955
+Lions  -------->   7.055
+Raiders  -------->   7.175
+Buccaneers  -------->   7.409
+Falcons  -------->   7.473
+Steelers  -------->   7.481
+Jets  -------->   7.551
+Cowboys  -------->   7.614
+Jaguars  -------->   7.634
+Titans  -------->   7.695
+Patriots  -------->   7.93
+Dolphins  -------->   8.007
+Browns  -------->   8.01
+Texans  -------->   8.103
+Bears  -------->   8.148
+Bills  -------->   8.149
+Broncos  -------->   8.273
+Packers  -------->   8.679
+Saints  -------->   8.965
+Giants  -------->   8.975
+49ers  -------->   9.039
+Ravens  -------->   9.211 <------- FIXED (Joe Flacco and Ray Rice did not play for the last game of the season)
+Vikings  -------->   9.378
+Panthers  -------->   9.535
+Chiefs  -------->   9.563
+Redskins  -------->   9.885
+Seahawks  -------->   12.16
+
+======================
+2013
+======================
+
+Ravens  -------->   6.304
+Giants  -------->   6.407
+Buccaneers  -------->   6.433
+Texans  -------->   6.598
+Falcons  -------->   6.722
+Redskins  -------->   6.743
+Lions  -------->   6.826
+Rams  -------->   7.262
+Bengals  -------->   7.357
+Dolphins  -------->   7.459
+Colts  -------->   7.519
+Jaguars  -------->   7.558
+Seahawks  -------->   7.63
+Raiders  -------->   7.674
+Browns  -------->   7.899
+Cardinals  -------->   7.91
+Saints  -------->   7.922
+Titans  -------->   7.945
+Steelers  -------->   8.076
+Broncos  -------->   8.294
+Bills  -------->   8.435
+Panthers  -------->   8.478
+Chargers  -------->   8.562
+Patriots  -------->   8.586
+Packers  -------->   8.673
+Jets  -------->   8.789
+Vikings  -------->   8.798
+Chiefs  -------->   9.22
+Cowboys  -------->   9.221
+Bears  -------->   9.335
+49ers  -------->   9.521
+Eagles  -------->   11.429
