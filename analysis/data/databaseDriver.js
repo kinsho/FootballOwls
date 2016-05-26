@@ -209,7 +209,11 @@ module.exports =
 				}
 				if (results.modifiedCount)
 				{
-					console.log('Modified ' + results.deletedCount + ' records within the "' + collectionName + '" collection');
+					console.log('Modified ' + results.modifiedCount + ' records within the "' + collectionName + '" collection');
+				}
+				if (results.upsertedCount)
+				{
+					console.log('Upserted ' + results.upsertedCount + ' records into the "' + collectionName + '" collection');
 				}
 
 				deferred.resolve(results);

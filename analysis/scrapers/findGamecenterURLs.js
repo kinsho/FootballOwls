@@ -28,22 +28,21 @@ _Q.spawn(function* ()
 	// Process the URLs into queries that can be inserted into the database
 	for (i = 0; i < urls.length; i++)
 	{
-		processedURLs.push(mongo.formInsertSingleQuery({
+		processedURLs.push(mongo.formUpdateOneQuery(
+		{
+			id: urls[i].id
+		},
+		{
 			season: YEAR_TO_ANALYZE,
-			url: urls[i]
-		}));
+			id: urls[i].id,
+			url: urls[i].url
+		}, true));
 	}
 
 	// Prep the database for data insertion
 	yield mongo.initialize();
 
-	// Dump all the old URLs (for the season being scraped) from the database
-	yield mongo.bulkWrite(DATABASE_URL_COLLECTION, true, mongo.formDeleteManyQuery(
-	{
-		season: YEAR_TO_ANALYZE
-	}));
-
-	// Push all the URLs into the database
+	// Write the new URLs into the database. Overwrite any that may already exist
 	processedURLs.unshift(DATABASE_URL_COLLECTION, true);
 	yield mongo.bulkWrite.apply(mongo, processedURLs);
 

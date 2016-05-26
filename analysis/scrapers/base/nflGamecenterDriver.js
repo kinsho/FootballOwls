@@ -133,7 +133,11 @@ module.exports =
 
 						if (response.statusCode === 200)
 						{
-							validURLs.push(testURL);
+							validURLs.push(
+							{
+								id: testIndex,
+								url: testURL
+							});
 						}
 					}
 				}

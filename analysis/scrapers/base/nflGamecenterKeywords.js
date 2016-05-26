@@ -7,11 +7,20 @@ module.exports =
 	PASS_MARKER: 'pass',
 
 	KNEEL_KEYWORD: 'kneels',
+	KICKS_KEYWORD: 'kicks',
+	PUNTS_KEYWORD: 'punts',
+	TIMEOUT_KEYWORD: 'TIMEOUT',
+	TWO_MINUTE_WARNING: 'Two-Minute Warning',
+	END_QUARTER: 'END QUARTER',
 
 	TIE_KEYWORD: 'TIE',
 	END_GAME_IDENTIFIER: 'END GAME',
 
 	TO_IDENTIFIER: 'to',
+	FOR_IDENTIFIER: 'for',
+	NO_IDENTIFIER: 'no',
+	REVERSED_IDENTIFIER: 'REVERSED',
+	INTENDED_IDENTIFIER: 'intended',
 
 	PASS_PLAY_IDENTIFIERS:
 	{
@@ -22,7 +31,33 @@ module.exports =
 
 	SPECIAL_TEAMS_PLAY_IDENTIFIERS:
 	{
-		PUNT: true,
-		KICKOFF: true
+		'PUNT': true,
+		'KICKOFF': true,
+		'XP': true,
+		'2PS': true,
+		'FG': true
+	},
+
+	SACKED_RESULT: 'sacked',
+	PENALTY_RESULT: 'PENALTY',
+	INCOMPLETE_PASS_KEYWORD: 'incomplete',
+	INTERCEPT_KEYWORD: 'INTERCEPT',
+
+	TD_RESULT: 'TD',
+	FG_RESULT: 'FG',
+
+	POINT_AFTER_TOUCHDOWN_SUCCESSFUL_IDENTIFIER: 'kick is good)',
+
+	TWO_POINT_CONVERSION_SUCCESSFUL_IDENTIFIER:
+	{
+		PASS: 'pass)',
+		RUN: 'run)'
+	},
+
+	DEFENSIVE_TWO_POINT_PLAY_IDENTIFIER:
+	{
+		SAFETY_IDENTIFIER: 'SAF',
+		DEFENSIVE_TWO_POINT_CONVERSION: 'defensive two point conversion'
 	}
+
 };
