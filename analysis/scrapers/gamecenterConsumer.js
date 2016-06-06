@@ -17,6 +17,7 @@ var _Q = require('Q'),
 
 // Note the placeholder in the URL string that allows us to load data from different teams
 var DATABASE_URL_COLLECTION = 'gamecenterURLs',
+	DATABASE_GAMES_COLLECTION = 'nflGames',
 	YEAR_TO_ANALYZE = '2015';
 
 // ----------------- PRIVATE METHODS --------------------------
@@ -166,6 +167,48 @@ function findYardsGained(desc)
 }
 
 /**
+ * Function that can determine the points to add to the score total based on the end result of any scoring play
+ *
+ * @param {Object} play - the play to analyze
+ *
+ * @returns {Number} - the number of points to add to the scoring team's score
+ */
+function assessScoringPlay(play)
+{
+	var pointsToAdd = 0;
+
+	// Calculate the total number of points that were scored during this play
+	if (play.type === keywords.TD_RESULT)
+	{
+		pointsToAdd += 6;
+
+		if (play.desc.indexOf(keywords.POINT_AFTER_TOUCHDOWN_SUCCESSFUL_IDENTIFIER) > -1)
+		{
+			pointsToAdd += 1;
+		}
+		else if ((play.desc.indexOf(keywords.TWO_POINT_CONVERSION_SUCCESSFUL_IDENTIFIER.PASS) > -1) ||
+			(play.desc.indexOf(keywords.TWO_POINT_CONVERSION_SUCCESSFUL_IDENTIFIER.RUN) > -1))
+		{
+			pointsToAdd += 2;
+		}
+	}
+	else if (play.type === keywords.FG_RESULT)
+	{
+		pointsToAdd += 3;
+	}
+	else if (play.type === keywords.DEFENSIVE_TWO_POINT_PLAY_IDENTIFIER.SAFETY_IDENTIFIER)
+	{
+		pointsToAdd += 2;
+	}
+	else if (play.desc.indexOf(keywords.DEFENSIVE_TWO_POINT_PLAY_IDENTIFIER.DEFENSIVE_TWO_POINT_CONVERSION) > -1)
+	{
+		pointsToAdd += 2;
+	}
+
+	return pointsToAdd;
+}
+
+/**
  * Function that strips the tail period off a keyword that may need to be recorded
  *
  * @param {String} word - the keyword to process
@@ -184,8 +227,7 @@ _Q.spawn(function* ()
 	var urls,
 		data,
 
-		game = {},
-		seasonGames = {},
+		seasonGames = [],
 
 		homeTeam,
 		homeTeamScoringTrends,
@@ -195,7 +237,6 @@ _Q.spawn(function* ()
 		awayTeamScoringTrends,
 		awayTeamPoints,
 
-		scorePlay,
 		pointsToAdd,
 		scoringPlays,
 		pointDifferential,
@@ -217,9 +258,6 @@ _Q.spawn(function* ()
 
 	// Pull all relevant stats from the database
 	urls = yield mongo.read(DATABASE_URL_COLLECTION, { season: YEAR_TO_ANALYZE });
-
-	// Close the database
-	mongo.closeDatabase();
 
 	for (i = 0; i < urls.length; i++)
 	{
@@ -264,39 +302,10 @@ _Q.spawn(function* ()
 				// Update the scores should any scoring have occurred on the previous play
 				if (previousPlayId && scoringPlays[previousPlayId])
 				{
-					scorePlay = scoringPlays[previousPlayId];
-					pointsToAdd = 0;
+					pointsToAdd = assessScoringPlay(scoringPlays[previousPlayId]);
 
-					// Calculate the total number of points that were scored during this play
-					if (scorePlay.type === keywords.TD_RESULT)
-					{
-						pointsToAdd += 6;
-
-						if (scorePlay.desc.indexOf(keywords.POINT_AFTER_TOUCHDOWN_SUCCESSFUL_IDENTIFIER) > -1)
-						{
-							pointsToAdd += 1;
-						}
-						else if ((scorePlay.desc.indexOf(keywords.TWO_POINT_CONVERSION_SUCCESSFUL_IDENTIFIER.PASS) > -1) ||
-							(scorePlay.desc.indexOf(keywords.TWO_POINT_CONVERSION_SUCCESSFUL_IDENTIFIER.RUN) > -1))
-						{
-							pointsToAdd += 2;
-						}
-					}
-					else if (scorePlay.type === keywords.FG_RESULT)
-					{
-						pointsToAdd += 3;
-					}
-					else if (scorePlay.type === keywords.DEFENSIVE_TWO_POINT_PLAY_IDENTIFIER.SAFETY_IDENTIFIER)
-					{
-						pointsToAdd += 2;
-					}
-					else if (scorePlay.desc.indexOf(keywords.DEFENSIVE_TWO_POINT_PLAY_IDENTIFIER.DEFENSIVE_TWO_POINT_CONVERSION) > -1)
-					{
-						pointsToAdd += 2;
-					}
-
-					// Now add the points scored to the point total of the team that scored those points
-					if (scorePlay.team === homeTeam)
+					// Now add those points scored to the point total of the team that scored those points
+					if (scoringPlays[previousPlayId].team === homeTeam)
 					{
 						homeTeamPoints += pointsToAdd;
 					}
@@ -392,16 +401,64 @@ _Q.spawn(function* ()
 
 		}
 
+		// Assess any scoring that may have taken place on the last play
+		if (scoringPlays[previousPlayId])
+		{
+			pointsToAdd = assessScoringPlay(scoringPlays[previousPlayId]);
+
+			// Now add those points scored to the point total of the team that scored those points
+			if (scoringPlays[previousPlayId].team === homeTeam)
+			{
+				homeTeamPoints += pointsToAdd;
+			}
+			else
+			{
+				awayTeamPoints += pointsToAdd;
+			}
+		}
+
+		// Record a book-end play to indicate the end of the game
+		if (posTeam === homeTeam)
+		{
+			homeTeamPlays.push(
+			{
+				endGame: true,
+				homeTeamScore: homeTeamPoints,
+				awayTeamScore: awayTeamPoints
+			});
+		}
+		else
+		{
+			awayTeamPlays.push(
+			{
+				endGame: true,
+				homeTeamScore: homeTeamPoints,
+				awayTeamScore: awayTeamPoints
+			});
+		}
+
 		// Figure out the winner
 		winner = homeTeamPoints > awayTeamPoints ? homeTeam : (awayTeamPoints > homeTeamPoints ? awayTeam : keywords.TIE_KEYWORD);
 
-		// Construct the game object and set it within the games collection
-		game.homeTeam = homeTeam;
-		game.awayTeam = awayTeam;
-		game.winner = winner;
-		game.homeTeamPlays = homeTeamPlays;
-		game.awayTeamPlays = awayTeamPlays;
-
-		seasonGames[awayTeam + '@' + homeTeam] = objectHelper.cloneObject(game);
+		// Construct the game record that will be stored within the database
+		seasonGames.push(mongo.formUpdateOneQuery(
+		{
+			id: urls[i].id
+		},
+		{
+			id: urls[i].id,
+			homeTeam: homeTeam,
+			awayTeam: awayTeam,
+			winner: winner,
+			homeTeamPlays: homeTeamPlays,
+			awayTeamPlays: awayTeamPlays
+		}, true));
 	}
+
+	// Write the new games into the database. Overwrite any old data for these same games
+	seasonGames.unshift(DATABASE_GAMES_COLLECTION, true);
+	yield mongo.bulkWrite.apply(mongo, seasonGames);
+
+	// Close the database
+	mongo.closeDatabase();
 });
