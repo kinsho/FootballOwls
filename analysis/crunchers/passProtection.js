@@ -8,7 +8,7 @@ global.StatsOwl =
 // ----------------- EXTERNAL MODULES --------------------------
 
 var _Q = require('Q'),
-	mongo = global.StatsOwl.require('data/databaseDriver');
+	mongo = global.StatsOwl.require('data/DAO/utility/databaseDriver');
 
 // ----------------- ENUMS/CONSTANTS --------------------------
 

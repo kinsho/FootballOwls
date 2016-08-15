@@ -27,16 +27,34 @@ module.exports =
 	 */
 	sendSuccessResponse: function(response, responseData, url)
 	{
-		// Write out the important headers before launching the response back to the client
-		response.writeHead(200,
+		try
+		{
+			// Write out the important headers before launching the response back to the client
+			response.writeHead(200,
 			{
 				"Content-Type" : router.deduceContentType(url),
+				"Content-Encoding" : ( ( router.isResourceWanted(url) && !(router.isImage(url)) ) ? 'gzip' : ''),
+				"Access-Control-Allow-Origin" : "*"
 			});
 
-		console.log('Response ready to be returned from URL: /' + url);
+			console.log('Response ready to be returned from URL: /' + url);
 
-		// Send a response back and close out this service call once and for all
-		response.end(responseData);
+			// Images must be returned in a binary format
+			if (router.isImage(url))
+			{
+				response.end(responseData, 'binary');
+			}
+			else
+			{
+				response.end(responseData);
+			}
+		}
+		catch(exception)
+		{
+			console.error('Error when sending back a supposedly successful response...');
+			console.error(exception);
+			this.sendInternalServerErrorResponse(response, url);
+		}
 	},
 
 	/**
@@ -77,8 +95,8 @@ module.exports =
 
 		// Send a response back and close out this service call once and for all
 		response.end(JSON.stringify(
-			{
-				error: INTERNAL_SERVER_ERROR_MESSAGE
-			}));
+		{
+			error: INTERNAL_SERVER_ERROR_MESSAGE
+		}));
 	}
 };

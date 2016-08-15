@@ -35,16 +35,23 @@ module.exports =
 		'KICKOFF': true,
 		'XP': true,
 		'2PS': true,
-		'FG': true
+		'2PR': true,
+		'FG': true,
+		'FGM': true,
+		'XPM': true
 	},
 
 	SACKED_RESULT: 'sacked',
 	PENALTY_RESULT: 'PENALTY',
+	NO_PLAY: 'no play',
 	INCOMPLETE_PASS_KEYWORD: 'incomplete',
+	ABORTED_KEYWORD: 'Aborted',
+	PUNT_KEYWORD: 'punt',
 	INTERCEPT_KEYWORD: 'INTERCEPT',
 
 	TD_RESULT: 'TD',
 	FG_RESULT: 'FG',
+	MISSED_FG_RESULT: 'FGM',
 
 	POINT_AFTER_TOUCHDOWN_SUCCESSFUL_IDENTIFIER: 'kick is good)',
 

@@ -9,13 +9,13 @@ global.StatsOwl =
 
 var _Q = require('Q'),
 	scraper = global.StatsOwl.require('scrapers/base/nflGamecenterDriver'),
-	mongo = global.StatsOwl.require('data/databaseDriver');
+	mongo = global.StatsOwl.require('data/DAO/utility/databaseDriver');
 
 // ----------------- ENUMS/CONSTANTS --------------------------
 
 // Note the placeholder in the URL string that allows us to load data from different teams
 var DATABASE_URL_COLLECTION = 'gamecenterURLs',
-	YEAR_TO_ANALYZE = '2015';
+	YEAR_TO_ANALYZE = 2015;
 
 // ----------------- SCRAPER LOGIC --------------------------
 

@@ -13,39 +13,48 @@ var ROUTE_JSON_DIRECTORY = 'config/',
 	ROUTE_JSON_NAME = 'routes',
 
 	CONTROLLERS_DIRECTORY = 'controllers/',
-	FOUNDATION_DIRECTORY = 'foundation/',
+	FOUNDATION_DIRECTORY = 'utility/',
 	PAGE_NOT_FOUND_CONTROLLER = '404',
 	HOME_CONTROLLER = 'home',
 	RESOURCES_CONTROLLER = 'resources',
 
 	INIT_ACTION = 'init',
-	ACTION_SUFFIX = 'Action',
 	CONTROLLER_SUFFIX = 'Controller',
 
 	RESOURCE_EXTENSIONS =
-		[
-			'.css',
-			'.png',
-			'.svg',
-			'.js',
-			'.ico',
-			'.map'
-		],
+	[
+		'.scss',
+		'.png',
+		'.gif',
+		'.svg',
+		'.js',
+		'.ico',
+		'.map',
+		'.json'
+	],
+
+	IMAGE_EXTENSIONS =
+	[
+		'.png',
+		'.gif',
+	],
 
 	CONTENT_TYPE_HEADERS =
 	{
 		'' : 'text/html', // If the URL does not fit any of the other patterns defined above, set an HTML header by default
+		'gif' : 'image/gif',
 		'ico' : 'image/vnd.microsoft.icon',
-		'css' : 'text/css',
+		'scss' : 'text/css',
 		'png' : 'image/png',
 		'svg' : 'image/svg+xml',
 		'js' : 'application/javascript',
-		'map' : 'application/javascript'
+		'map' : 'application/javascript',
+		'json' : 'application/json'
 	};
 
 // ----------------- PRIVATE VARIABLES -----------------------------
 
-var routes = {}; // the cache of all route data, in JSON format
+var routes; // the cache of all route data, in JSON format
 
 // ----------------- MODULE DEFINITION --------------------------
 module.exports =
@@ -57,8 +66,10 @@ module.exports =
 	 */
 	populateRoutes: _Q.async(function* ()
 	{
-		routes = yield fileManager.fetchJSON(ROUTE_JSON_DIRECTORY + ROUTE_JSON_NAME);
-		routes = JSON.parse(routes);
+		if ( !(routes) )
+		{
+			routes = JSON.parse(yield fileManager.fetchJSON(ROUTE_JSON_DIRECTORY + ROUTE_JSON_NAME));
+		}
 	}),
 
 	/**
@@ -98,11 +109,8 @@ module.exports =
 	 */
 	findController: function(controllerName)
 	{
-		// If a path has not been defined, the server will route the request to the home page, by default
-		if ( !(controllerName) )
-		{
-			return CONTROLLERS_DIRECTORY + HOME_CONTROLLER + CONTROLLER_SUFFIX;
-		}
+		// If a path has not been defined, the server routes to a page marked as the home page
+		controllerName = controllerName || HOME_CONTROLLER;
 
 		// If a path has been defined however, the server will route the request to the controller indicated
 		// within the URL, provided that a controller can be found that matches the one indicated within the URL.
@@ -125,17 +133,19 @@ module.exports =
 	},
 
 	/**
-	 * Function responsible for defining a full route toward a specific action within a controller. If an
-	 * action has not been explicitly specified by the request being served, a full route to that controller's
+	 * Function responsible for defining a full route toward a specific action method within a controller. If an
+	 * action method has not been explicitly specified by the request being served, a full route to that controller's
 	 * initialization function will be provided instead
+	 *
+	 * @param {String} [actionMethod] - name of the method to invoke from the target controller
 	 *
 	 * @returns {String} - the full name of the action method to invoke within the target controller
 	 *
 	 * @author kinsho
 	 */
-	findAction: function()
+	findAction: function(actionMethod)
 	{
-		return (INIT_ACTION + ACTION_SUFFIX);
+		return (actionMethod || INIT_ACTION);
 	},
 
 	/**
@@ -160,5 +170,30 @@ module.exports =
 				return CONTENT_TYPE_HEADERS[keys[i]];
 			}
 		}
+	},
+
+	/**
+	 * Function responsible for determining whether the resource being requested is an image file
+	 *
+	 * @param {String} url - the URL to inspect in order to figure out whether the resource being requested
+	 * 		is an image
+	 *
+	 * @returns {boolean} - a boolean indicating whether the requested resource is an image
+	 *
+	 * @author kinsho
+	 */
+	isImage: function(url)
+	{
+		var i;
+
+		for (i = IMAGE_EXTENSIONS.length - 1; i >= 0; i--)
+		{
+			if ( url.endsWith(IMAGE_EXTENSIONS[i]) )
+			{
+				return true;
+			}
+		}
+
+		return false;
 	}
 };

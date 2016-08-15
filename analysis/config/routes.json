@@ -1,6 +1,7 @@
 {
 	"resources" : "Resources",
 
-	"dline" : "DefensiveLine",
-	"passing" : "Passing"
+	"home" : "selectGame",
+	"selectGame" : "selectGame",
+	"gameDetails" : "gameDetails"
 }

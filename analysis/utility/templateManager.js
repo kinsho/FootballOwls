@@ -6,11 +6,55 @@
 
 var _Q = require('Q'),
 	_Handlebars = require('Handlebars'),
+	_htmlMinifier = require('html-minifier').minify,
 	fileManager = global.OwlStakes.require('utility/fileManager');
 
 // ----------------- PRIVATE VARIABLES -----------------------------
 
-var compiledTemplates = [];
+var compiledTemplates = [],
+	htmlMinifierConfig =
+	{
+		collapseWhitespace : true,
+		collapseInlineTagWhitespace : true
+	};
+
+// ----------------- HELPERS --------------------------
+
+/**
+ * Handlebars helper function that allowsHelper designed to help us to generate blocks of HTML over a range of numbers
+ *
+ * @author kinsho
+ */
+_Handlebars.registerHelper('range', (beginningNumber, endingNumber, block) =>
+{
+	var num = beginningNumber,
+		output = '';
+
+	while(num <= endingNumber)
+	{
+		output += block.fn(num);
+		num += 1;
+	}
+
+	return output;
+});
+
+/**
+ * Helper designed to help us differentiate even or odd index numbers. Useful for styling purposes.
+ *
+ * @author kinsho
+ */
+_Handlebars.registerHelper('if_even', function(conditional, options)
+{
+	if ((conditional % 2) === 0)
+	{
+		return options.fn(this);
+	}
+	else
+	{
+		return options.inverse(this);
+	}
+});
 
 // ----------------- MODULE DEFINITION --------------------------
 
@@ -56,7 +100,7 @@ module.exports =
 			compiledTemplates[templateDirectory + '-' + templateName] = template;
 		}
 
-		// Feed the data into the template and return the resulting HTML
-		return template(data);
+		// Feed the data into the template and return the resulting HTML after it has been minified
+		return _htmlMinifier(template(data), htmlMinifierConfig);
 	})
 };

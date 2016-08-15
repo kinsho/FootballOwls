@@ -10,7 +10,7 @@ global.StatsOwl =
 var _Q = require('Q'),
 	_cheerio = require('cheerio'),
 	scraper = global.StatsOwl.require('scrapers/base/proFootballFocusDriver'),
-	mongo = global.StatsOwl.require('data/databaseDriver');
+	mongo = global.StatsOwl.require('data/DAO/utility/databaseDriver');
 
 // ----------------- ENUMS/CONSTANTS --------------------------
 

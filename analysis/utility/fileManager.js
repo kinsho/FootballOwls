@@ -5,7 +5,8 @@
 // ----------------- EXTERNAL MODULES --------------------------
 
 var _Q = require('Q'),
-	_fs = require('fs');
+	_fs = require('fs'),
+	router;  // For some queer reason, we have to import application modules dynamically......fucking Node.....
 
 // ----------------- ENUM/CONSTANTS --------------------------
 
@@ -13,12 +14,13 @@ var CLIENT_DIRECTORY = process.cwd() + '/client/',
 	SERVER_DIRECTORY = process.cwd() + '/',
 	CLIENT_RELATIVE_PATH = 'client/',
 
-	STYLESHEET_DIRECTORY = 'css/',
+	STYLESHEET_DIRECTORY = 'styles/',
 	VIEWS_DIRECTORY = 'views/',
 
 	TEMPLATE_EXTENSION = '.handlebars',
-	CSS_EXTENSION = '.css',
-	JSON_EXTENSION = '.json';
+	SCSS_EXTENSION = '.scss',
+	JSON_EXTENSION = '.json',
+	MAP_EXTENSION = '.map';
 
 // ----------------- I/O FUNCTION TRANSFORMATIONS --------------------------
 
@@ -33,7 +35,6 @@ var fsReadDir = _Q.denodeify(_fs.readdir),
 	 * or if a file name is passed in, will fetch only the system path for that specific file
 	 *
 	 * @param {String} directoryName - the path of the directory, relative from the project root
-	 * @param {String} [fileName] - the name of the file to fetch within the indicated directory
 	 * @param {boolean} [recursiveRead] - flag indicating whether any descendant subdirectories within the target
 	 * 		directory should also be searched for files
 	 * @param {String} [extensionFilter] - if specified, the only file names that will be returned are the file
@@ -90,8 +91,7 @@ var fileNameScraper = _Q.async(function* (directoryName, recursiveRead, extensio
 				{
 					// Recursively scrape out files within the subdirectory provided that the recursiveRead
 					// flag was set
-					subDirectoryFiles = yield fileNameScraper(directoryName + fileNames[i] + '/', null, true,
-						extensionFilter);
+					subDirectoryFiles = yield fileNameScraper(directoryName + fileNames[i] + '/', true, extensionFilter);
 					files = files.concat(subDirectoryFiles);
 				}
 			}
@@ -154,9 +154,27 @@ var fileNameScraper = _Q.async(function* (directoryName, recursiveRead, extensio
 			}
 			else
 			{
+				// In the event that the module fails to recover a mapping file, simply return nothing.
+				// Such mapping files are only useful to developers and have no bearing on the final product.
+				if ( filePaths.endsWith(MAP_EXTENSION) )
+				{
+					return '';
+				}
+
 				console.log('Fetching the following file: ' + filePaths);
 				fileContents = yield fsReadFile(filePaths);
-				fileContents = fileContents.toString();
+
+				// Fetch the router if it has not been fetched yet
+				if ( !(router) )
+				{
+					router = global.OwlStakes.require('config/router');
+				}
+
+				// Only convert file contents to string values should the files be non-image files
+				if ( !(router.isImage(filePaths)) )
+				{
+					fileContents = fileContents.toString();
+				}
 			}
 		}
 		catch(error)
@@ -176,14 +194,16 @@ module.exports =
 	/**
 	 * Generator function that returns all stylesheets specific to a particular page
 	 *
+	 * @param {String} directory - the directory from which to fetch stylesheet files
+	 *
 	 * @returns {Array[Object]} - a collection of objects containing the contents of each stylesheet
 	 *		as well as the name of that stylesheet within the file system
 	 *
 	 * @author kinsho
 	 */
-	fetchStylesheets: _Q.async(function* ()
+	fetchStylesheets: _Q.async(function* (directory)
 	{
-		return yield fileNameScraper(CLIENT_DIRECTORY + STYLESHEET_DIRECTORY, true, CSS_EXTENSION);
+		return yield fileNameScraper(CLIENT_DIRECTORY + STYLESHEET_DIRECTORY + directory + '/', true, SCSS_EXTENSION);
 	}),
 
 	/**
@@ -241,9 +261,21 @@ module.exports =
 	}),
 
 	/**
+	 * Generator function that returns a collection of file paths leading to all the files housed in the passed directory
+	 *
+	 * @param {String} dirPath - the relative path of the directory from which to excavate file paths information
+	 *
+	 * @returns {Array[String]} - a list of all file paths for all visible files within the passed directory
+	 *
+	 * @author kinsho
+	 */
+	fetchAllFilePaths: _Q.async(function* (dirPath)
+	{
+		return yield fileNameScraper(process.cwd() + '/' + dirPath, true);
+	}),
+
+	/**
 	 * Generic generator function meant to fetch the contents of any one file in the system
-	 * The invoking logic has to provide the whole path data needed to fetch the file, as no assumptions
-	 * can be made here
 	 *
 	 * @param {String} filePath - the relative path to the file starting from the project root
 	 *
@@ -253,10 +285,6 @@ module.exports =
 	 */
 	fetchFile: _Q.async(function* (filePath)
 	{
-		if (filePath.endsWith('js'))
-		{
-			filePath = process.cwd() + filePath;
-		}
-		return yield fileContentScraper(filePath);
+		return yield fileContentScraper(process.cwd() + filePath);
 	})
 };
