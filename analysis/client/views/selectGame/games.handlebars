@@ -1,0 +1,12 @@
+{{#games}}
+    <div class='gameBox'>
+        <span><img class='teamLogo' src='client/images/{{awayTeamImageMarker}}.gif' /></span>
+        <span class='hideOnMobile {{#unless isHomeWinner}} highlightWinner {{/unless}}'> {{awayTeamName}}</span>
+        <span class='pointsLabel'> {{awayScore}} </span>
+        <span class='scoreDash'> @ </span>
+        <span class='pointsLabel'> {{homeScore}} </span>
+        <span class='hideOnMobile {{#if isHomeWinner}} highlightWinner {{/if}}'> {{homeTeamName}} </span>
+        <span><img class='teamLogo' src='client/images/{{homeTeamImageMarker}}.gif' /></span>
+        <span><button class='navButton' data-game-id ={{id}}>Details</button></span>
+    </div>
+{{/games}}

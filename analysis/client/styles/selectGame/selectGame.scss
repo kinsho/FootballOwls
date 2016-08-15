@@ -1,0 +1,285 @@
+/* ----------------------- IMPORTS ----------------------------- */
+
+@import '../foundation/animations';
+@import '../foundation/colors';
+@import '../foundation/fonts';
+@import '../foundation/loader';
+@import '../foundation/general';
+@import '../foundation/d3';
+
+/* ----------------------- STYLES ----------------------------- */
+
+#seasonRow
+{
+	border:
+	{
+		top-left-radius: 10px;
+		top-right-radius: 10px;
+
+		width: 1px;
+		style: solid;
+		color: map-get($COLORS, blackTheme);
+	}
+
+	margin:
+	{
+		left: auto;
+		right: auto;
+		top: 25px;
+	}
+
+	padding: 20px;
+	width: 80%;
+
+	text-align: left;
+
+	background: linear-gradient(map-get($COLORS, lightGrayTheme), map-get($COLORS, grayTheme));
+}
+
+#weekRow
+{
+	border:
+	{
+		bottom-left-radius: 10px;
+		bottom-right-radius: 10px;
+
+		width: 1px;
+		style: solid;
+		color: map-get($COLORS, blackTheme);
+	}
+	margin:
+	{
+		left: auto;
+		right: auto;
+		bottom: 25px;
+	}
+
+	padding: 20px;
+	width: 80%;
+
+	text-align: left;
+
+	background: linear-gradient(map-get($COLORS, darkGrayTheme), map-get($COLORS, darkerGrayTheme));
+}
+
+.filterLabel
+{
+	@extend %formLabelText;
+
+	margin-right: 20px;
+}
+
+#weekDropdown
+{
+	@extend %formSelectText;
+
+	width: 100px;
+
+	padding-left: 10px;
+
+	& > option
+	{
+		padding-left: 10px;
+	}
+}
+
+#gamesContainerHeader
+{
+	@extend %formSectionHeaderText;
+	@include transitionSettings($property: opacity, $duration: 0.5s);
+
+	width: 100%;
+
+	opacity: 1.0;
+
+	& > span
+	{
+		margin:
+		{
+			top: 25px;
+			left: auto;
+			right: auto;
+		}
+
+		border:
+		{
+			width: 1px;
+			style: solid;
+			color: map-get($COLORS, darkGrayTheme);
+
+			top-left-radius: 15px;
+			top-right-radius: 15px;
+		}
+
+		padding: 10px;
+		width: 25%;
+		display: inline-block;
+	}
+
+	&.fadeOut
+	{
+		opacity: 0.2;
+	}
+}
+
+#gamesContainer
+{
+	@include transitionSettings($property: opacity, $duration: 0.5s);
+
+	border:
+	{
+		radius: 15px;
+		width: 1px;
+		style: solid;
+		color: map-get($COLORS, darkGrayTheme);
+	}
+
+	margin:
+	{
+		bottom: 25px;
+		left: auto;
+		right: auto;
+	}
+
+	width: 80%;
+
+	opacity: 1.0;
+
+	&.fadeOut
+	{
+		opacity: 0.2;
+	}
+}
+
+.gameBox
+{
+	@extend %dataCell;
+
+	border:
+	{
+		bottom:
+		{
+			width: 1px;
+			style: solid;
+			color: map-get($COLORS, grayTheme);
+		}
+	}
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 20px;
+
+	background-color: map-get($COLORS, lightBlueTheme);
+
+	&:first-of-type
+	{
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+	}
+
+	&:last-of-type
+	{
+		border-bottom: none;
+
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+
+	&:nth-child(2n)
+	{
+		background-color: map-get($COLORS, lightWhiteTheme);
+	}
+
+	& > span
+	{
+		&:nth-of-type(1)
+		{
+			flex: 15%;
+			text-align: right;
+			padding-right: 5px;
+		}
+
+		&:nth-of-type(2)
+		{
+			flex: 20%;
+			text-align: right;
+			padding-right: 5px;
+
+			@media only screen and (max-device-width: 727px)
+			{
+				flex: 0%;
+			}
+		}
+
+		&:nth-of-type(3)
+		{
+			flex: 10%;
+			text-align: center;
+			padding-right: 5px;
+		}
+
+		&:nth-of-type(4)
+		{
+			flex: 0 3 10%;
+			text-align: center;
+		}
+
+		&:nth-of-type(5)
+		{
+			flex: 10%;
+			text-align: center;
+			padding-left: 5px;
+		}
+
+		&:nth-of-type(6)
+		{
+			flex: 20%;
+			text-align: left;
+			padding-left: 5px;
+		}
+
+		&:nth-of-type(7)
+		{
+			flex: 1 0 15%;
+			text-align: left;
+			padding-left: 5px;
+		}
+
+		&:nth-of-type(8)
+		{
+			flex: 0 2 20%;
+			text-align: right;
+			padding-right: 5px;
+		}
+	}
+}
+
+.teamLogo
+{
+	@include scaleTransition($length: 0.5, $width: 0.5);
+}
+
+.pointsLabel
+{
+	@extend %significantText;
+
+	&:before
+	{
+		content: '(';
+	}
+
+	&:after
+	{
+		content: ')';
+	}
+}
+
+.highlightWinner
+{
+	font:
+	{
+		style: italic;
+	}
+}

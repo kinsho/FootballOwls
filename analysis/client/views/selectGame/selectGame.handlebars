@@ -1,0 +1,27 @@
+<!-- Season selector -->
+<div id='seasonRow'>
+    <span class='filterLabel'>Season</span>
+    <span class='buttonSet'>
+    {{#seasons}}
+		<input type='radio' id='season{{this}}' name='season' /><label for='season{{this}}'>{{this}}</label>
+    {{/seasons}}
+    </span>
+</div>
+
+<!-- Week selector -->
+<div id='weekRow'>
+	<span class='filterLabel'>Week</span>
+	<select id='weekDropdown'>
+        {{#weeks}}
+            <option id='week{{this}}' value="{{this}}">{{this}}</option>
+        {{/weeks}}
+    </select>
+</div>
+
+<!-- Games listing -->
+<div id='gamesContainerHeader'>
+	<span>Games</span>
+</div>
+<div id='gamesContainer'>
+    {{{gamesTemplate}}}
+</div>
